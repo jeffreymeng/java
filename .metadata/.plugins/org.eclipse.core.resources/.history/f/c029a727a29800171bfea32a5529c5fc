@@ -1,0 +1,44 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: 9/12/17
+ * Purpose: Ask the user for some information on the DVD's, then print it into a well formatted string.
+ */
+package movieInventory;
+
+import java.util.Scanner;
+
+public class MovieInventory {
+
+	public static void main(String[] args) {
+		double lordCost, kidsCost, menaceCost; // cost or product
+		//Movie Titles: Lord of the Ringdings, Dennis the Dentist Menace, Spy Kids AAged 52
+		int lordQuantity, menaceQuantity, kidsQuantity; //quantity of product
+
+		Scanner in = new Scanner(System.in);
+		
+		System.out.print("How much is Lord?  ");
+		lordCost = in.nextDouble();
+		System.out.print("How many Lords does the store own?  ");
+		lordQuantity = in.nextInt();
+		
+		System.out.print("How much is Menace?  ");
+		menaceCost = in.nextDouble();
+		System.out.print("How many Menace does the store own?  ");
+		menaceQuantity = in.nextInt();
+		
+		System.out.print("How much is Kids?  ");
+		kidsCost = in.nextDouble();
+		System.out.print("How many Kids does the store own?  ");
+		kidsQuantity = in.nextInt();
+		
+		
+		System.out.printf("%n%20s %-40s %-15s %-25s %n", "", "Video Title", "Cost", "# in Stock");
+		System.out.printf("%-40s %-15.2f %-25d %n", "Lord of the Ringdings", lordCost, lordQuantity);
+		System.out.printf("%-40s %-15.2f %-25d %n", "Dennis the Dentist Menace", menaceCost, menaceQuantity);
+		System.out.printf("%-40s %-15.2f %-25d %n", "Spy Kids Aged 52", kidsCost, kidsQuantity);
+		System.out.printf("%-40s %-15.2f %-25d %n", "Spy Kids Aged 52", kidsCost, kidsQuantity);
+		
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Sep 20, 2017
+ * Purpose: Ask the user for their name and age. Tell them how many years until they can drive.
+ */
+package ifElseStatements;
+
+import java.util.Scanner;
+
+public class UntilDrivingAge {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int age = in.nextLine();
+
+	}
+
+}

@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ $# -eq 0 ]; then
-    echo "Gitsync Usage: gitsync [repo folder name] [message] or use current repo with gitsync t [message]"
+    echo "Gitsync Usage: gitsync [message]"
     exit 1
 fi
 
