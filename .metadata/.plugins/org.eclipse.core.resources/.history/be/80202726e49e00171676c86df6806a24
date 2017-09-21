@@ -1,0 +1,18 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Sep 21, 2017
+ * Purpose: Ask the user to enter two numbers. Print out in ascending order.
+ */
+
+package ifElseStatements;
+
+import java.util.Scanner;
+
+public class OrderTwoInts {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

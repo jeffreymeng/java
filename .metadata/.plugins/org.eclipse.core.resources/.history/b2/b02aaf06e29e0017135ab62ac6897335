@@ -22,7 +22,7 @@ public class UntilDrivingAge {
 			System.out.println(name + ", you will be able to drive in " + (16 - age) + " years.");
 		}
 		
-		in.close();
+
 	}
 
 }
