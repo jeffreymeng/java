@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ifElseStatements.JuceBoxRalley&apos; to &apos;JukeBoxRalley&apos;&#x0A;- Original project: &apos;Ch3Conditionals&apos;&#x0A;- Original element: &apos;ifElseStatements.JuceBoxRalley&apos;&#x0A;- Renamed element: &apos;ifElseStatements.JukeBoxRalley&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;JuceBoxRalley&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ifElseStatements{JuceBoxRalley.java[JuceBoxRalley" matchStrategy="1" name="JukeBoxRalley" qualified="false" references="true" similarDeclarations="false" stamp="1506009424669" textual="false" version="1.0"/>
+</session>

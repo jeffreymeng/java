@@ -11,10 +11,8 @@ import java.util.Scanner;
 public class TelegramCost {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int words;
-		
 		System.out.println("Enter the number of words in your telegram:");
-		words = in.nextInt();
+		int words = in.nextInt();
 		
 		if (words > 15) {
 			System.out.printf("Your " + words + " word telegram will cost $%.2f.", 8.5 + ((words - 15) * 0.25));

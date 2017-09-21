@@ -26,7 +26,7 @@ public class OrderTwoInts {
 		} else {
 			System.out.println(num2 + ", " + num1);
 		}
-		in.close();
+		
 	}
 
 }

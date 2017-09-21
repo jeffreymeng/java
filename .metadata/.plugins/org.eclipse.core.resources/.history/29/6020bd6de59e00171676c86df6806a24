@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Sep 21, 2017
+ * Purpose:
+ */
+
+package ifElseStatements;
+
+import java.util.Scanner;
+
+public class MuseumEntryFee {
+
+	public static void main(String[] args) {
+		
+	}
+}
