@@ -14,7 +14,6 @@ public class MuseumEntryFee {
 		Scanner in = new Scanner(System.in);
 		int age;
 		
-		
 		System.out.println("Enter the age for whom the ticket is for:");
 		age = in.nextInt();
 		
