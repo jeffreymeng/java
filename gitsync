@@ -4,10 +4,9 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-git pull
 git status
 git add --all .
-git commit m “${*:1}”
+git commit -m=“${*:1}”
 git push
 echo "github sync sucussful"
 

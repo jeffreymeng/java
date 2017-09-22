@@ -17,10 +17,6 @@ public class JukeBoxRalley {
 
 		System.out.println("Enter your year of birth:");
 		year = in.nextInt();
-		/* this next line gets the enter key, because nextInt() only took the number, not the enter key
-		 the user entered. To get around this we consume the new line, so the next nextLine
-		 will not automatically accept just the enter key without letting the user input first.
-		*/
 		in.nextLine();
 		System.out.println("Enter your favorite fruit:");
 		fruit = in.nextLine();
