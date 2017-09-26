@@ -21,8 +21,7 @@ public class TriangleType {
 		System.out.println("Enter the length of the third side of the triangle:");
 		s3 = in.nextInt();
 		
-		
-		if (s1 + s2 <= s3 || s2 + s3 <= s1 || s3 + s1 <= s2) {
+		if (s1 + s2 > s3 && s2 + s3 > s1 && s3 + s1 > s2) {
 			if (s1 == s2 && s2 == s3) {
 				System.out.println("You have an equilateral triangle.");
 			} else if (s1 == s2 || s2 == s3 || s1 == s3) {
@@ -36,6 +35,6 @@ public class TriangleType {
 		
 		in.close();
 
-	}
+	}	
 
 }

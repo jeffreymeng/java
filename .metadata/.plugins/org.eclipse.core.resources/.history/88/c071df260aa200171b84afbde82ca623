@@ -1,0 +1,39 @@
+/*
+  * Programmer: Jeffrey Meng
+ * Date: Sep 25, 2017
+ * Purpose: tell a student if they are elegible for the honor roll.
+ */
+
+package logicalOperators;
+
+import java.util.Scanner;
+
+public class HonorRoleEligible {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		boolean qualify;//gpa, number of courses, and dicipline records.
+		String diciplineRecords;
+		//If all are true they qualify.
+		System.out.println("What is your grade point average?");
+		qualify = ((int) in.nextDouble()) >= 90;//if your grade is greater than 90, you still qualify
+	
+		//if they previously 
+		System.out.println("How many courses are you taking?");
+		qualify = qualify && in.nextInt() >= 5;
+		
+		in.nextLine();
+		
+		System.out.println("Have you had any dicipline records(y/n)?");
+		diciplineRecords = in.nextLine();
+		
+		if (qualify && diciplineRecords.toLowerCase().charAt(0) == 'y') {
+			System.out.println("Sorry! You are not elegible for the honor role.");
+		} else if (qualify && diciplineRecords.toLowerCase().charAt(0) == 'n') {
+			System.out.println("You qualify for the Honor Roll!");
+		} else {
+			System.out.println("You did not enter y or n for wether you had dicipline records.");
+		}
+	}
+
+}

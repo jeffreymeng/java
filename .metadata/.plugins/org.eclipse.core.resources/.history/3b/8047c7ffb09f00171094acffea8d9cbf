@@ -1,0 +1,21 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Sep 22, 2017
+ * Purpose:
+ */
+
+package logicalOperators;
+
+import java.util.Scanner;
+
+public class WinsMoney {
+
+	public static void main(String[] args) {
+		int money;
+		Scanner in = new Scanner(System.in);
+		money = in.nextInt();
+		
+
+	}
+
+}
