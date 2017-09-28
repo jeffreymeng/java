@@ -1,0 +1,18 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Sep 26, 2017
+ * Purpose: Determine which cable TV channel is the user's favorite.
+ */
+
+package moreConditionalWork;
+
+import java.util.Scanner;
+
+public class NonCableTV {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

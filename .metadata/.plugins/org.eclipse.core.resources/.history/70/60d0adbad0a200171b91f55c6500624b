@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Sep 26, 2017
+ * Purpose: Determine if the user is elegible to see a movie based on age.
+ */
+
+package moreConditionalWork;
+
+public class MovieAdmission {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
