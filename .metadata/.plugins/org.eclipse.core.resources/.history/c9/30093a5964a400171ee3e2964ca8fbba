@@ -13,8 +13,6 @@ public class Password {
 	public static void main(String[] args) {
 		final String PASSWORD = "wronghorsebatterystaple";
 		Scanner in = new Scanner(System.in);
-		
-		
 		System.out.println("Enter the password:");
 		if (in.nextLine().equals(PASSWORD))
 			System.out.println("Hello, You're in!");

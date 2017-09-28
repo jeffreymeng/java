@@ -1,12 +1,42 @@
 #!/bin/bash
-if [ $# -eq 0 ]; then
-    echo "Gitsync Usage: gitsync [message]"
-    exit 1
-fi
+function concatenate_args
+{
+    string=""
+    for a in "$@" # Loop over arguments
+    do 
+            if [[ "$string" != "" ]]
+            then
+                string+=" " # Delimeter
+            fi
+            string+="$a"
+    done
+    echo "$string"
+}
+
+# Usage:
+args="$(concatenate_args "$@")"
+
+if [ $#==0]
+then
+    echo "
+GITSYNC LIGHT VERSION: Current Directory only
+
+usage: gitsync <commit message(muti words OK)>
+
+Gitsync is a tool to help you automatically commit in github.
+The first argument passed should be the path, relative to the base path.
+
+Your base path is: $BASE_PATH
+
+You can configure the base path in the source of this command.
+
+To commit, enter gitsync, and then 't' for the current directrory, or a directory path(without spaces). 
+All parameters after the first will be combined into the git commit message. The spaces will be kept."
+ fi
 
 git status
 git add --all .
-git commit -m“$*”
+git commit -m “$args”
 git push
 echo "github sync sucussful"
 
