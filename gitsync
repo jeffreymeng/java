@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-if [ $#==0]
+if [ $#==0 ]
 then
     echo "
 GITSYNC LIGHT VERSION: Current Directory only
@@ -19,7 +19,7 @@ To commit, enter gitsync, and then 't' for the current directrory, or a director
 All parameters after the first will be combined into the git commit message. The spaces will be kept."
  fi
 params = $*
-echo $params
+echo “$params”
 git status
 git add --all .
 git commit -m “$params”
