@@ -1,0 +1,26 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Sep 29, 2017
+ * Purpose:
+ */
+
+package switchStatements;
+
+import java.util.Scanner;
+
+public class NumberMessage {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int num;
+		System.out.println("Enter a number between 1 and 10(inclusive):");
+		num = in.nextInt();
+		
+		switch (num) {
+			case 1:
+			case 3:
+				System.out.println("Your number is a low odd number");
+		}
+	}
+
+}

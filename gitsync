@@ -1,20 +1,5 @@
 #!/bin/bash
-function concatenate_args
-{
-    string=""
-    for a in "$@" # Loop over arguments
-    do 
-            if [[ "$string" != "" ]]
-            then
-                string+=" " # Delimeter
-            fi
-            string+="$a"
-    done
-    echo "$string"
-}
 
-# Usage:
-args="$(concatenate_args "$@")"
 
 if [ $#==0]
 then
@@ -33,10 +18,11 @@ You can configure the base path in the source of this command.
 To commit, enter gitsync, and then 't' for the current directrory, or a directory path(without spaces). 
 All parameters after the first will be combined into the git commit message. The spaces will be kept."
  fi
-
+params = $*
+echo $params
 git status
 git add --all .
-git commit -m “$args”
+git commit -m “$params”
 git push
 echo "github sync sucussful"
 

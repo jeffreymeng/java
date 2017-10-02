@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;swichStatements&apos; to &apos;switchStatements&apos;&#x0A;- Original project: &apos;Ch3Conditionals&apos;&#x0A;- Original element: &apos;Ch3Conditionals/src/swichStatements&apos;&#x0A;- Renamed element: &apos;Ch3Conditionals/src/switchStatements&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;swichStatements&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;swichStatements" name="switchStatements" qualified="false" references="true" stamp="1506699831845" textual="false" version="1.0"/>
+</session>
