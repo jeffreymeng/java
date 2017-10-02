@@ -18,11 +18,10 @@ You can configure the base path in the source of this command.
 To commit, enter gitsync, and then 't' for the current directrory, or a directory path(without spaces). 
 All parameters after the first will be combined into the git commit message. The spaces will be kept."
  fi
-test = $*
-echo $test
+echo $*
 git status
 git add --all .
-git commit -m ‘$test’
+git commit -m $’$*’
 git push
 echo "github sync sucussful"
 
