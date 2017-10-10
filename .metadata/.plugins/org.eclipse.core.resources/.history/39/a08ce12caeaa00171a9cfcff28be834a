@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 6, 2017
+ * Purpose: Print each letter of a user's name on a line, then tell them how many letters are in their name.
+ */
+
+package whileLoops;
+
+public class SplitName {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

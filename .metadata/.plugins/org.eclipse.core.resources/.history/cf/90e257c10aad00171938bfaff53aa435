@@ -1,0 +1,23 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 9, 2017
+ * Purpose:
+ */
+
+package doWhile;
+
+import java.util.Scanner;
+
+public class GuessingGame {
+
+	public static void main(String[] args) {
+		int number;//random number
+		number = (int) (Math.random() * 10) + 1;
+		int guess, tries;
+		do {
+		System.out.println("Guess the number between 1 and 100(inclusive)");
+		guess = in.nextInt();
+		} while (guess != number);
+	}
+
+}

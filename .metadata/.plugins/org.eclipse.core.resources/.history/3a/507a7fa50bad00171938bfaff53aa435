@@ -1,0 +1,24 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 9, 2017
+ * Purpose: tests weighting of random numbers.
+ */
+
+package misc;
+
+public class RandTester {
+
+	public static void main(String[] args) {
+		//int randNum = (int) (Math.random() * 10) + 1;
+		int tests = 10000;
+		int min = 1;
+		int max = 10;
+		int i = 0;
+		int[] results = new int[max - min];
+		while (i < tests) {
+			System.out.println((int) (Math.random() * 10) + 1);
+		}
+
+	}
+
+}
