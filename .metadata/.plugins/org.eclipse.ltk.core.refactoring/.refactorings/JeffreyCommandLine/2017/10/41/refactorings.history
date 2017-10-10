@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;equationSolver&apos; to &apos;commandLine&apos;&#x0A;- Original project: &apos;JeffreyCommandLine&apos;&#x0A;- Original element: &apos;JeffreyCommandLine/src/equationSolver&apos;&#x0A;- Renamed element: &apos;JeffreyCommandLine/src/commandLine&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;equationSolver&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;equationSolver" name="commandLine" qualified="false" references="true" stamp="1507651098666" textual="false" version="1.0"/>
+</session>
