@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 11, 2017
+ * Purpose:
+ */
+
+package forLoops;
+
+public class MutiNumberAdder {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

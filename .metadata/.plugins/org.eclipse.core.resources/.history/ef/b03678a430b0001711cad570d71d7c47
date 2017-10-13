@@ -1,0 +1,23 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 13, 2017
+ * Purpose:
+ */
+
+package nestedLoops;
+
+public class AlphabetLadder {
+
+	public static void main(String[] args) {
+		 String letters = "abcdef";
+		 
+		 for (int a = 0; a < 6; a ++) {
+			 for (int b = 0; b < 5; b ++) {
+				 
+			 }
+			 System.out.println();
+			 
+		 }
+	}
+
+}

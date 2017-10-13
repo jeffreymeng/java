@@ -1,0 +1,33 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 13, 2017
+ * Purpose:
+ */
+
+package nestedLoops;
+
+public class NestedLoops {
+
+	public static void main(String[] args) {
+		for (int a = 0; a < 6; a ++) {
+			System.out.print("a");
+			for (int b = 0; b < 5; b ++) {
+				System.out.print(("b"));
+				for (int c = 0; c < 4; c ++) {
+					System.out.print("c");
+					for (int d = 0; d < 3; d ++) {
+						System.out.print("d");
+						for (int e = 0; d < 3; d ++) {
+							System.out.print("d");
+							for (int f = 0; d < 3; d ++) {
+								System.out.print("d");
+							}
+						}
+					}
+				}
+			}
+			System.out.println();
+		}
+	}
+
+}

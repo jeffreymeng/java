@@ -1,0 +1,20 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 11, 2017
+ * Purpose:
+ */
+
+package integer;
+
+public class GetDigit {
+
+	public static void main(String[] args) {
+		int num, returnDigit;
+		int i, digit = 1;
+		for (i = b - 1; i > 0; i++)
+			digit = digit * 10;
+		digit = (a / digit) % 10;System.out.println(digit);
+
+	}
+
+}

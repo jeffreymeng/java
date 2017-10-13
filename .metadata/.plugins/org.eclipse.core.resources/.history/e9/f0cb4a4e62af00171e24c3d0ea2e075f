@@ -1,0 +1,33 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 11, 2017
+ * Purpose:
+ */
+
+package forLoops;
+
+import java.util.Scanner;
+
+public class SaluteToPets {
+
+	public static void main(String[] args) {
+		String name, orientation;
+		int number;
+		Scanner in = new Scanner(System.in);
+		System.out.println("What is the name of your favorite pet?");
+		name = in.nextLine();
+		System.out.println("How many times would you like to see the name appear on the screen?");
+		number = in.nextInt();
+		while (number < 0) {
+			System.out.println("Please enter a non-negative number:");
+			number = in.nextInt();
+		}
+		in.nextLine();
+		System.out.println("Would you like to see the name once per line, or arranged horizontally?");
+		orientation = in.nextLine();
+		
+		
+
+	}
+
+}
