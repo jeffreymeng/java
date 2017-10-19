@@ -14,7 +14,7 @@ public class FlightSimulator {
 
 		Scanner in = new Scanner(System.in);
 		int aircraft, adjustChoice, changeCount = 0;
-		boolean skipChoose = false, firstTimeLooping = true;
+		boolean exitLoop = false, skipChoose = false, firstTimeLooping = true;
 		char alterAnother = 'y';
 		// first time looping: if the do while
 		// loop was run the first time or not. This will affect the statements

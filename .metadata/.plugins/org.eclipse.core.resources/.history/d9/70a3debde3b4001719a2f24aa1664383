@@ -14,12 +14,11 @@ public class FlightSimulator {
 
 		Scanner in = new Scanner(System.in);
 		int aircraft, adjustChoice, changeCount = 0;
-		boolean skipChoose = false, firstTimeLooping = true;
-		char alterAnother = 'y';
+		boolean exitLoop = false, skipChoose = false, firstTimeLooping = true;
 		// first time looping: if the do while
 		// loop was run the first time or not. This will affect the statements
 		// made.(an vs. another)
-		String aircraftName = "";
+		String alterAnother, aircraftName = "";
 		// exitLoop: whether to exit the loop which contains the
 		// switch statement for the characteristic change menu
 		// skipChoose: whether to skip the choose another characteristic
@@ -40,11 +39,7 @@ public class FlightSimulator {
 				.print("\nSelect an aircraft model to simulate\n\t1. Blimp\n\t2. Helicopter\n\t"
 						+ "3. Fighter Jet\n\t4. Space Shuttle\nEnter a choice(1-4): ");
 		aircraft = in.nextInt();
-		// error trap
-		while (aircraft < 1 || aircraft > 4) {
-			System.out.print("Please enter an number between 1 and 4: ");
-			aircraft = in.nextInt();
-		}
+
 		// this will be useful later.
 		switch (aircraft) {
 		case 1:
@@ -55,6 +50,11 @@ public class FlightSimulator {
 			aircraftName = "Fighter Jet";
 		case 4:
 			aircraftName = "Space Shuttle";
+		}
+		// error trap
+		while (aircraft < 1 || aircraft > 4) {
+			System.out.print("Please enter an number between 1 and 4: ");
+			aircraft = in.nextInt();
 		}
 
 		// 2 - 3. Select characteristic
@@ -81,8 +81,7 @@ public class FlightSimulator {
 				System.out.print("Please enter a number between one and six: ");
 				adjustChoice = in.nextInt();
 			}
-			// we increment changeCount here. If there is an error, we'll deduct
-			// one later.
+			//we increment changeCount here. If there is an error, we'll deduct one later.
 			changeCount++;
 			switch (adjustChoice) {
 			case 1:
@@ -92,8 +91,7 @@ public class FlightSimulator {
 								+ "\nwith a pilot");
 				if (charOne)
 					charAlreadyAdjusted = true;// we set the charAlreadyAdjusted
-												// variable so we can print a
-												// message
+												// variable so we can print a message
 												// at the bottom.
 				else
 					charOne = true;// characteristic one has been modified.
@@ -152,10 +150,9 @@ public class FlightSimulator {
 
 				break;
 			default:
-				// they did not enter a valid number
+				//they did not enter a valid number
 				changeCount--;
-				System.out
-						.println("That was not a valid integer between 1 and 6:");
+				System.out.println("That was not a valid integer between 1 and 6");
 				skipChoose = true;
 
 			}
@@ -163,7 +160,7 @@ public class FlightSimulator {
 				System.out
 						.println("(You've already adjusted this charcteristic, so it won't be counted again)");
 				charAlreadyAdjusted = false;
-				// we don't want to double count characteristics
+				//we don't want to double count characteristics
 				changeCount--;
 			}
 			if (skipChoose) {
@@ -172,15 +169,14 @@ public class FlightSimulator {
 				in.nextLine();
 				System.out
 						.println("\nWould you like to alter another characteristic(y/n)?");
-				alterAnother = in.nextLine().toLowerCase().charAt(0);
-				while (alterAnother != 'n' && alterAnother != 'y') {
-					System.out.println("Please enter either y or n:");
-					alterAnother = in.nextLine().toLowerCase().charAt(0);
+				alterAnother = in.nextLine();
+				if (alterAnother.toLowerCase().charAt(0) == 'n') {
+					exitLoop = true;
 				}
 			}
-		} while (alterAnother != 'n');
-		System.out.println("You altered " + changeCount + " characteristics"
-				+ " for the " + aircraftName + ".");
+		} while (!exitLoop);
+		System.out.println("You altered " + changeCount
+				+ " charistics for the " + aircraftName + ".");
 		in.close();
 	}
 
