@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 24, 2017
+ * Purpose: Write a method that takes 3 arguments.
+ */
+
+package methodsWorksheet1;
+
+public class RepeatPrintChar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

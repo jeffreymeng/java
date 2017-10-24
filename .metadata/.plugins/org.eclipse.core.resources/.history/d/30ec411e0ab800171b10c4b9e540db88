@@ -1,0 +1,44 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 23, 2017
+ * Purpose: Allow the user to flip a coin, then analyze the result.
+ */
+
+package eclipseQuiz;
+
+import java.util.Scanner;
+
+public class EclipseQuiz {
+
+	public static void main(String[] args) {
+		int headCount = 0, tailCount = 0, flips;// Flips: number of requested flips
+		String flip;//Flip: the result of the flip.
+ 		Scanner in = new Scanner(System.in);
+
+		System.out.print("How many flips to analyze? ");
+		flips = in.nextInt();
+		while (flips > 0) {
+			System.out.print("Please enter a number greater than 0: ");
+			flips = in.nextInt();
+		}
+		System.out.print("\n");
+
+		// loop the amount of times the user requested.
+		for (int i = 0; i < flips; i++) {
+			if ( (int) (Math.random() * 1) + 0 == 1) {
+				flip = "H";
+				headCount ++;
+			} else {
+				flip = "T";
+				tailCount ++;
+			}
+			System.out.println(i + ". Flip coin and enter result (H or T) #" + i + ": " + flip);
+		}
+		System.out.println("\nResults:");
+		System.out.printf("%d heads, or %.2f%", headCount, (headCount / (headCount + tailCount) ));
+
+		in.close();
+
+	}
+
+}
