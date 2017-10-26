@@ -1,0 +1,27 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 25, 2017
+ * Purpose:
+ */
+
+package utils;
+
+public class Num {
+	public static String getSuffix(int num) {
+		String suffix;
+		if (num % 100 - num % 10 == 10) {
+			suffix = "th";
+		} else {
+			switch (num % 10) {
+			case 1:
+				return "st";
+			case 2:
+				return "nd";
+			case 3:
+				return "rd";
+			default:
+				return "th";
+			}
+		}
+	}
+}

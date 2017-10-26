@@ -1,0 +1,27 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 25, 2017
+ * Purpose: Print dollar signs and an address.
+ */
+
+package methodsWorksheet2;
+
+public class Address {
+
+	public static void main(String[] args) {
+		repeatChar('$', 30);
+		repeatChar('$', 30);
+		printAddress();
+
+	}
+	public static void repeatChar(char charcter, int count) {
+		for (int i = 0; i < count; i ++) {
+			System.out.print(charcter);
+		}
+	}
+	public static void printAddress() {
+		System.out.println("Johnny Appleseed");
+		System.out.println("12345 Anyroad");
+	}
+
+}

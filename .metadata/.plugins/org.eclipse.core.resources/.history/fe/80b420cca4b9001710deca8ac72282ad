@@ -1,0 +1,22 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 25, 2017
+ * Purpose:
+ */
+
+package utils;
+
+public class Str {
+	public static void repeatChar(char charcter, int count, boolean newLine) {
+			for (int i = 0; i < count; i ++) {
+				System.out.print(charcter);
+			}
+	}
+
+	public static void repeatChar(String charcter, int count) {
+		for (int i = 0; i < count; i++) {
+			System.out.print(charcter);
+		}
+	}
+
+}

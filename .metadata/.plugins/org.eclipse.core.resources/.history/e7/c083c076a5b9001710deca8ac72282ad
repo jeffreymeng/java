@@ -1,0 +1,19 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 25, 2017
+ * Purpose:
+ */
+
+package methodsWorksheet2;
+
+public class GradeInJava {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void passing() {
+		System.out.println("You're passing!");
+	}
+
+}
