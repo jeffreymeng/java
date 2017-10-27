@@ -1,11 +1,11 @@
 /*
- * Programmer: Jeffrey Meng
- * Date: Oct 25, 2017
- * Purpose:
+ * Utility Package: User Design
+ * Jeffrey Meng
  */
 
 package utils;
 
 public class UX {
+	
 
 }

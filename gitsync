@@ -15,14 +15,13 @@ Your base path is: $BASE_PATH
 
 You can configure the base path in the source of this command.
 
-To commit, enter gitsync, and then 't' for the current directrory, or a directory path(without spaces). 
-All parameters after the first will be combined into the git commit message. The spaces will be kept."
+To commit, enter gitsync, and then a commit message. All parameters will be combined into the git commit message. The spaces will be kept."
  fi
 
 echo $*
 git status
 git add --all .
-git commit -m ”$*”
+git commit -m "$*"
 git push
 echo "github sync sucussful"
 

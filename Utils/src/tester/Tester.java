@@ -6,13 +6,12 @@
 
 package tester;
 
-import utils.Str;
+import utils.Num;
 
 public class Tester {
 
 	public static void main(String[] args) {
 		
-
 	}
 
 }

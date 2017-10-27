@@ -1,7 +1,6 @@
 /*
- * Programmer: Jeffrey Meng
- * Date: Oct 25, 2017
- * Purpose:
+ * Utility Package: Numbers
+ * Jeffrey Meng
  */
 
 package utils;
@@ -26,4 +25,5 @@ public class Num {
 		}
 		
 	}
+
 }
