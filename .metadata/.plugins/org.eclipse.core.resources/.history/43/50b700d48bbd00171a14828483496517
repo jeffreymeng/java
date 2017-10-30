@@ -1,0 +1,21 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 30, 2017
+ * Purpose: Prints the area and radi of circles with int radi 1 - 10
+ */
+
+package methodsWorksheet4;
+
+public class CircleArea {
+
+	public static void main(String[] args) {
+		
+		for (int i = 1; i <= 10; i ++) {
+			System.out.println(i + ": " + getArea(i));
+		}
+	}
+	public static void getArea(int radi) {
+		
+	}
+
+}
