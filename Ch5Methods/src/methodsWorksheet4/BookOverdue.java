@@ -7,6 +7,7 @@
 package methodsWorksheet4;
 
 import java.util.Scanner;
+import utils.Num;
 
 public class BookOverdue {
 	public static void main(String[] args) {
@@ -22,6 +23,6 @@ public class BookOverdue {
 		if (days > 10) {
 			System.out.print("WAY OVERDUE: ");
 		}
-		System.out.println("$" + ( days * 0.15) + " fine.");
+		System.out.println("$" + Num.formatToString( days * 0.15, "0.00") + " fine.");
 	}
 }

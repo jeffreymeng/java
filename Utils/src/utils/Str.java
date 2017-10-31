@@ -35,26 +35,10 @@ public class Str {
 	}
 
 	public static String formatDollar(String num) {
-		
-		if (num.indexOf(".") > -1) {
-			String whole = num.substring(0, num.indexOf("."));
-			String decimal = num.substring(num.indexOf(".") + 1);
 
-			switch (decimal.length()) {
-			case 1:
-				decimal = decimal + "0";
-				break;
-			case 0:
-				decimal = decimal + "00";
-				break;
-			}
-		} else {
-			return num = ".00";
-		}
-		// accepts a string number e.g. 4 or 4.6
-		// returns formatted as money: 4.00 or 4.60
-
-		return "";
+		return Num.formatToString(Integer.parseInt(num), "0.00");
 	}
+
+	
 
 }
