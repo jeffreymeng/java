@@ -1,0 +1,21 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 1, 2017
+ * Purpose:
+ */
+
+package methodsWorksheet5Extra;
+
+import java.util.Scanner;
+import utils.Num;
+
+public class GradeData {
+
+	public static void main(String[] args) {
+		int students;
+		int[] grades;
+		System.out.println("Enter the number of students:");
+		System.out.println(Num.getAverage({1, 1, -1}));
+	}
+
+}

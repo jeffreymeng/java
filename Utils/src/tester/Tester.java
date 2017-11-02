@@ -7,11 +7,14 @@
 package tester;
 
 import utils.Num;
+import utils.Str;
+import utils.UX;
 
 public class Tester {
 
 	public static void main(String[] args) {
 		
+		System.out.println(Num.formatToString(7, "0.0##"));
 	}
 
 }

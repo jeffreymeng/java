@@ -1,0 +1,27 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 1, 2017
+ * Purpose:
+ */
+
+package methodsWorksheet5Extra;
+
+import java.util.Scanner;
+import utils.Num;
+
+public class GradeData {
+
+	public static void main(String[] args) {
+		int students;
+		int[] grades;
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Enter the number of students:");
+		students = in.nextInt();
+		while (students < 100 && students > 0)
+		for (int i = 0; i < students; i ++) {
+			
+		}
+	}
+
+}
