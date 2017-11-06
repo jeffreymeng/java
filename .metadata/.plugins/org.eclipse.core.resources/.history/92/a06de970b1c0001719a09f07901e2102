@@ -1,0 +1,24 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 3, 2017
+ * Purpose:
+ */
+
+package smartbot;
+
+import java.util.Scanner;
+
+public class SmartBot {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("SmartBot v0.1.0");
+		System.out.println("Initializing");
+		System.out.println("Init SmartBot.calculator.calc");
+		
+		in.close();
+		
+	}
+
+}
