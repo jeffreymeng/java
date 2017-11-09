@@ -48,7 +48,7 @@ public class MrKullasPaintStoreRedo {
 					in.nextLine();
 				}
 				if (quantity == 0) {
-					System.out.println("You did not add any " + color.toLowerCase() + " paint.");
+					System.out.println("You did not add any " + color + " paint.");
 				} else if (color.equalsIgnoreCase("red")) {
 					System.out.printf("You bought " + quantity + " gallons of red paint, adding $%.2f to your total.%n",
 							getRedCost(quantity));
@@ -82,9 +82,9 @@ public class MrKullasPaintStoreRedo {
 		System.out.println("*                             *");
 		System.out.printf("*  Subtotal    %13.2f  *%n", (getRedCost(red) + getGreenCost(green)));
 		System.out.println("*                             *");
-		System.out.printf("* 9%% Sales Tax %10.2f     *%n",
+		System.out.printf("* 9%% Sales Tax %10.2f    *%n",
 				(double) (0.09 * (getRedCost(red) + getGreenCost(green))));
-		System.out.printf("*  Total         %13.2f  *%n", (1.09 * (getRedCost(red) + getGreenCost(green))));
+		System.out.printf("*  Total         %13.2f   *%n", (1.09 * (getRedCost(red) + getGreenCost(green))));
 		printThankYou();
 		in.close();
 	}

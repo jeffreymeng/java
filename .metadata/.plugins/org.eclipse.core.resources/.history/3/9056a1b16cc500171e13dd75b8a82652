@@ -48,7 +48,7 @@ public class MrKullasPaintStoreRedo {
 					in.nextLine();
 				}
 				if (quantity == 0) {
-					System.out.println("You did not add any " + color.toLowerCase() + " paint.");
+					System.out.println("You did not add any " + color + " paint.");
 				} else if (color.equalsIgnoreCase("red")) {
 					System.out.printf("You bought " + quantity + " gallons of red paint, adding $%.2f to your total.%n",
 							getRedCost(quantity));
