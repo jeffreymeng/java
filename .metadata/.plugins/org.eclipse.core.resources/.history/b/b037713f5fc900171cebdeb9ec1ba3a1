@@ -1,0 +1,18 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 14, 2017
+ * Purpose:
+ */
+
+package arraysWorksheet1;
+
+import java.util.Scanner;
+
+public class UserInputArray {
+
+	public static void main(String[] args) {
+		int[] age = new int[10];
+
+	}
+
+}

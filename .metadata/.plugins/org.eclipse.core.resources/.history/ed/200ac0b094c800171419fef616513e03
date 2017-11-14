@@ -1,0 +1,19 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 13, 2017
+ * Purpose:
+ */
+
+package casino;
+
+import java.util.Scanner;
+
+public class SlotMachine {
+
+	public static void main(String[] args) {
+		System.out.println("Spin?");
+		
+		System.out.println("You Lose!");
+	}
+
+}

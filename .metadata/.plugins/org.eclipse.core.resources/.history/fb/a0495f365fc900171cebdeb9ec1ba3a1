@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 14, 2017
+ * Purpose:
+ */
+
+package arraysWorksheet1;
+
+public class UserInputArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
