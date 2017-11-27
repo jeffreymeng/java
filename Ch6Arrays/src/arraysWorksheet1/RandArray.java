@@ -15,7 +15,7 @@ public class RandArray {
 		int even = 0;//even nums in array
 		
 		for (int i = 0; i < randArr.length; i++) {
-			randArr[i] = ThreadLocalRandom.current().nextInt(1, 11);// (min, max + 1)
+			randArr[i] = (int)(Math.random() * (10 - 1) + 1);// (min, max + 1)
 
 		}
 		System.out.print("[");

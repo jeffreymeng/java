@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 27, 2017
+ * Purpose: "decrypt" a string of characters.
+ */
+
+package arrayDecryptionWorksheet;
+
+public class ArrayDecryptionWorksheet {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

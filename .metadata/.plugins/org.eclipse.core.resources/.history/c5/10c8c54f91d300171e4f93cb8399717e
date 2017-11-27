@@ -1,0 +1,31 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 27, 2017
+ * Purpose: "decrypt" a string of characters.
+ */
+
+package arrayDecryptionWorksheet;
+
+public class ArrayDecryptionWorksheet {
+
+	public static void main(String[] args) {
+		// Decode information
+		// 0th word is nonsense(#0)
+		// odd words use third and fourth characters
+		// even words use only the fifth character
+		String[] data = {
+		                 "Nexa2f5",
+		                 "z52Bizlm",
+		                 "Diskapr",
+		                 "emkem9sd",
+		                 "LaWYr4Us",
+		                 "dAStn78L",
+		                 "mPTuriye",
+		                 "aaeeiuUu",
+		                 "IL8Ctmpn"
+	};
+				
+
+	}
+
+}

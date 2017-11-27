@@ -1,0 +1,18 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 27, 2017
+ * Purpose:
+ */
+
+package substitutionCipher;
+
+import java.util.Scanner;
+
+public class SubstitutionCipher {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

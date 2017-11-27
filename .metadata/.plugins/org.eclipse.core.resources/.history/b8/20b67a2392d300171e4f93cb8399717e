@@ -1,0 +1,42 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 27, 2017
+ * Purpose: "decrypt" a string of characters.
+ */
+
+package arrayDecryptionWorksheet;
+
+public class ArrayDecryptionWorksheet {
+
+	public static void main(String[] args) {
+		// Decrypting information
+		// first word is in the 0th position
+		// odd words use third and fourth characters
+		// even words use only the fifth character
+		String[] data = {"Nexa2f5",
+				"z52Bizlm",
+				"Diskapr",
+				"emkem9sd",
+				"LaWYr4Us",
+				"dAStn78L",
+				"mPTuriye",
+				"aaeeiuUu",
+				"IL8Ctmpn"};
+		String result = "";
+		
+		
+		for (int i = 1; i < data.length; i ++) {
+			if (i != 0 && i % 2 != 0) {
+				//current index is not even or zero(it is odd).
+				result += data[i].charAt(5);
+				
+			} else {
+				result += data[i].substring(3, 5);//(inclusive, exclusive)
+			}
+		}
+		
+		System.out.println(result);
+
+	}
+
+}
