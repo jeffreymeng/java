@@ -1,0 +1,29 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 13, 2017
+ * Purpose:
+ */
+
+package array;
+
+public class Binary {
+	/**
+	 * Searches an ascending integer array for the index of a number.
+	 * 
+	 * 
+	 */
+	public static int asec(int[] array, int key) {
+		//Binary search:
+		//find the middle element of the array.
+		//if the middle element is less than the key, 
+		//only consider the array above the half.
+		//if it equals, return the index.
+		//if the middle element is more
+		//only consider the array below.
+		//repeat until element is found or went through the entire array.
+		
+		
+		return 0;
+	}
+
+}

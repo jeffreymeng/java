@@ -1,0 +1,25 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 27, 2017
+ * Purpose:
+ */
+
+package substitution;
+
+public class SubstitutionCipher {
+	public static String encrypt(char key, String message) {
+		char[] result = new char[message.length()];
+		int ascii;//ascii value of the char. For use inside the loop below
+		for (int i = 0; i < message.length(); i++) {
+			ascii = (int) message.charAt(i);//ascii representation of the char
+		}
+		return "";
+
+	}
+
+	public static String decrypt(char key, String message) {
+
+		return "";
+
+	}
+}

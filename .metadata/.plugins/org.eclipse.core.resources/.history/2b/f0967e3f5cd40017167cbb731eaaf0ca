@@ -1,0 +1,36 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 27, 2017
+ * Purpose:
+ */
+
+package substitution;
+
+public class SubstitutionCipher {
+	// key is a integer that shows how many characters to shift the message.
+	public static void main(String[] args){
+		System.out.println(encrypt(4, "hi"));
+	}
+	public static String encrypt(int key, String message) {//charKey is the key as a char, which will be converted to an integer.
+		
+		char[] result = new char[message.length()];
+		int ascii;//ASCII value of the char. For use inside the loop below
+		
+		//loop through each character within the message
+		for (int i = 0; i < message.length(); i++) {
+			ascii = (int) message.charAt(i);//ASCII representation of the char
+			
+			result[i] += (char) ascii + key;//shift the character.
+			
+			
+		}
+		return "";
+
+	}
+
+	public static String decrypt(char key, String message) {
+
+		return "";
+
+	}
+}

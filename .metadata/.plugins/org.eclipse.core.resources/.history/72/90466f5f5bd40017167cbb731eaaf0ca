@@ -1,0 +1,29 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 27, 2017
+ * Purpose:
+ */
+
+package substitution;
+
+public class SubstitutionCipher {
+	//key is a lowercase char. substitution cipher changes a to that key,
+	//b to the letter after that key, etc.
+	public static String encrypt(char key, String message) {
+		char[] result = new char[message.length()];
+		int ascii;//ascii value of the char. For use inside the loop below
+		int key;
+		for (int i = 0; i < message.length(); i++) {
+			ascii = (int) message.charAt(i);//ascii representation of the char
+			result[i] = ascii + 
+		}
+		return "";
+
+	}
+
+	public static String decrypt(char key, String message) {
+
+		return "";
+
+	}
+}

@@ -1,0 +1,18 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 27, 2017
+ * Purpose:
+ */
+
+package substitution;
+
+import java.util.Scanner;
+
+public class SimpleUI {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
