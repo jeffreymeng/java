@@ -24,7 +24,6 @@ public class GradeData {
 			students = in.nextInt();
 		}
 		
-		double tempGradeInput;
 		for (int i = 0; i < students; i ++) {
 			
 			System.out.print("Enter the grade for student " + (i + 1) + ": ");

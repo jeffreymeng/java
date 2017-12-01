@@ -22,7 +22,7 @@ public class SlotMachine {
 		in.close();
 		*/
 		System.out.println(randInt(1,2));
-		
+		in.close();
 		
 	}
 	// random number, min and max inclusive 

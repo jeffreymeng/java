@@ -1,0 +1,26 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 30, 2017
+ * Purpose:
+ */
+
+package sort;
+
+public class Sort {
+
+	public static int[] BubbleSort(int[] array) {
+		
+		boolean swapped = false;
+		while(!swapped) {
+			//go through the array.
+			for (int i = 0; i < array.length; i ++) {
+				//check if the current element is greater than the next element.
+				if (array[i] > array[i + 1]) {
+					
+				}
+			}
+		}
+		return array;
+	}
+
+}

@@ -23,6 +23,7 @@ public class ArrayMethods {
 		System.out.println("The last element of the array is " + userData[userData.length - 1]);
 		printMyArray(userData);
 		System.out.println(ArrayAverage(userData));
+		in.close();
 	}
 	public static void printMyArray(int[] arr) {
 		System.out.print("[");

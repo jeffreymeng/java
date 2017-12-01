@@ -75,5 +75,6 @@ public class EquationSolver {
 		System.out
 				.println("Command line quitted. If you did not initiate this, please "
 						+ "report this bug.");
+		in.close();
 	}
 }

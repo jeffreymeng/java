@@ -37,7 +37,7 @@ public class Str {
 	public static String formatDollar(String num) {
 		
 		if (num.indexOf(".") > -1) {
-			String whole = num.substring(0, num.indexOf("."));
+			//String whole = num.substring(0, num.indexOf(".")); not used
 			String decimal = num.substring(num.indexOf(".") + 1);
 
 			switch (decimal.length()) {

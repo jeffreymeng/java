@@ -17,6 +17,7 @@ public class UserInputArray {
 			System.out.println("Enter age #" + i + ":");
 			age[i] = in.nextInt();
 		}
+		in.close();
 
 	}
 

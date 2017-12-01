@@ -49,6 +49,7 @@ public class SubstitutionCipher {
 			System.out.println(decrypt(key, message));
 			
 		}
+		in.close();
 	}
 	public static String encrypt(int key, String message) {//charKey is the key as a char, which will be converted to an integer.
 		

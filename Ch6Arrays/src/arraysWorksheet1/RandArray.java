@@ -6,7 +6,6 @@
 
 package arraysWorksheet1;
 
-import java.util.concurrent.ThreadLocalRandom;
 
 public class RandArray {
 

@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Nov 30, 2017
+ * Purpose:
+ */
+
+package sortingArray1;
+
+public class Char {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

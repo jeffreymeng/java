@@ -36,7 +36,7 @@ public class Calculator {
 				break;
 			case "divide":
 				result = num1/num2;
-			defualt:
+			default:
 				System.out.println("You did not enter an avaliable operation.");
 			}
 			System.out.println("Your result is: " + result); 
