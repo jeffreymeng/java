@@ -1,0 +1,18 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Dec 6, 2017
+ * Purpose:
+ */
+
+package videoStoreSystem;
+
+public class VideoStoreSystem {
+	public static void main(String[] args) {
+		//customer data
+		String[] name;
+		int[] customerId;
+		int[] movieId;
+		int[] rentalCode;
+		int[] daysCustomerHadMovie;
+	}
+}

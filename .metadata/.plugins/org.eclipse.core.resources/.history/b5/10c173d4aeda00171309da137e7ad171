@@ -1,0 +1,20 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Dec 6, 2017
+ * Purpose:
+ */
+
+package videoStoreSystem;
+
+public class VideoStoreSystem {
+	public static void main(String[] args) {
+		//customer data
+		String[] name =  {"Rick", "Dylan", "Nathan", "Kevin", "Ian", "Jeffreson", "Jane", "Mary", "Brian", "Jason"};
+		int[] customerId = {871, 872, 873, 874, 875, 876, 878, 879, 880, 881};
+		int[] movieId;
+		int[] rentalCode;
+		int[] daysCustomerHadMovie;
+
+		
+	}
+}

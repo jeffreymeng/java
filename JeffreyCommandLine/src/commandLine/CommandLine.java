@@ -6,11 +6,16 @@
 
 package commandLine;
 
+import java.util.Scanner;
+
 public class CommandLine {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Scanner in = new Scanner(System.in);
+		System.out.println("In Development.");
+		System.out.println("Autorun EquationSolver Module");
+		EquationSolver.run(in.nextLine());
+		
 	}
 
 }

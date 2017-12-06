@@ -1,0 +1,39 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Dec 6, 2017
+ * Purpose:
+ */
+
+package videoStoreSystem;
+
+public class VideoStoreSystem {
+	
+	static String[] name =  {"Stefan", "Dylan", "Nathan", "Kevin", "Ian", "Edgar", "Jane", "Mary", "Brian", "Jason"};
+	static int[] customerId = {871, 872, 873, 874, 875, 876, 878, 879, 880, 881};
+	static int[] movieId = {1047, 1092, 1037, 1026, 1025, 9186, 9287, 4639, 7593, 4791};
+	static int[] rentalCode = {1, 5, 1, 5, 5, 1, 1, 5, 1, 5};
+	static int[] daysCustomerHadMovie = {0, 4, 2, 6, 5, 1, 17, 3, 2, 6};
+	static boolean[] late = new boolean[10];
+	static double[] lateFee = new double[10];
+	
+	public static void main(String[] args) {
+		
+		
+		
+		calculateLateFees();
+		
+		
+		
+
+		
+	}
+
+	private static void calculateLateFees() {
+		for (int i = 0; i < name.length; i ++) {
+			if (daysCustomerHadMovie[i]) {
+				
+			}
+		}
+		
+	}
+}

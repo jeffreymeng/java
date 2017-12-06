@@ -1,0 +1,32 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Oct 10, 2017
+ * Purpose: Solves equations
+ */
+
+package commandLine;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class EquationSolver {
+
+	public static void main(String[] args) {
+		/*
+		 * When we learn classes and methods:
+		 * Class command
+		 *  method contains
+		 *  method flags
+		 * Class package
+		 * 
+		 * write licenses to external file
+		 */
+		System.out.println("============ Jeffrey Command Line ============");
+		System.out.println("Initalizing...");
+		String command, commandString;
+		Scanner in = new Scanner(System.in);
+
+	
+		in.close();
+	}
+}

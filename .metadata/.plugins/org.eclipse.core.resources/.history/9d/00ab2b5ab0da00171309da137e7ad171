@@ -1,0 +1,65 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Dec 6, 2017
+ * Purpose:
+ */
+
+package videoStoreSystem;
+
+public class VideoStoreSystem {
+	
+	static String[] name =  {"Stefan", "Dylan", "Nathan", "Kevin", "Ian", "Edgar", "Jane", "Mary", "Brian", "Jason"};
+	static int[] customerId = {871, 872, 873, 874, 875, 876, 878, 879, 880, 881};
+	static int[] movieId = {1047, 1092, 1037, 1026, 1025, 9186, 9287, 4639, 7593, 4791};
+	static int[] rentalCode = {1, 5, 1, 5, 5, 1, 1, 5, 1, 5};
+	static int[] daysCustomerHadMovie = {0, 4, 2, 6, 5, 1, 17, 3, 2, 6};
+	static boolean[] late = new boolean[10];//primitive boolean initializes as false
+	static double[] lateFee = new double[10];
+	
+	public static void main(String[] args) {
+		
+		
+		
+		calculateLateFees();
+		
+		
+		
+
+		
+	}
+
+	private static void calculateLateFees() {
+		for (int i = 0; i < name.length; i ++) {
+			if (daysCustomerHadMovie[i] > rentalCode[i]) {
+				lateFee[i] = (daysCustomerHadMovie[i] - rentalCode[i]) * (rentalCode[i] > 1 ? 0.69 : 1.49);
+				//java ternary operator:       condition ? value if true : value if false
+				late[i] = true;
+			}
+		}
+		
+	}
+	public static void sortByCustomerId() {
+		boolean swapped = true;
+		int temp;// for swapping
+		while (swapped) {
+			swapped = false;
+			// go through the array. We will not go through the last element of
+			// the array.
+			for (int i = 0; i < array.length - 1; i++) {
+				// check if the current element is greater than the next
+				// element.
+				if (array[i] > array[i + 1]) {
+					// if it is, swap the two elements.
+					temp = array[i];
+					array[i] = array[i + 1];
+					array[i + 1] = temp;
+					// set swapped to true so the program knows to make another
+					// pass through the array.
+					swapped = true;
+				}
+
+			}
+		}
+		return array;
+	}
+}
