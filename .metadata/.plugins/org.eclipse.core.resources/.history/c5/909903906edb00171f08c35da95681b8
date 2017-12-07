@@ -7,7 +7,7 @@
 package videoStoreSystem;
 
 public class VideoStoreSystem {
-	
+
 	public static void main(String[] args) {
 
 		// should use global vars but Mr. Kulla wont let us
@@ -23,8 +23,6 @@ public class VideoStoreSystem {
 		double[] lateFee = new double[10];
 
 		calculateLateFees(name, daysCustomerHadMovie, rentalCode, lateFee, late);
-		
-		printCustomers(name, customerId, movieId, rentalCode, daysCustomerHadMovie, late, lateFee);
 
 	}
 
@@ -32,22 +30,14 @@ public class VideoStoreSystem {
 			int[] movieId, int[] rentalCode, int[] daysCustomerHadMovie,
 			boolean[] late, double[] lateFee) {
 		System.out.println("===== Late Customers =====");
-		System.out.printf("Customer     Days Late   Late Fees%n");
+		System.out.printf("Customer            Days Late   Late Fees");
 		for (int i = 0; i < name.length; i++) {
 			if (daysCustomerHadMovie[i] > rentalCode[i]) {
-				System.out.printf("%-10s   %-10d  %-9.2f%n", name[i],
-						daysCustomerHadMovie[i] - rentalCode[i], lateFee[i]);
-			}
-		}
-		System.out.println("===== Non Late Customers =====");
-		System.out.printf("Customer     Days Left  %n");
-		for (int i = 0; i < name.length; i++) {
-			if (daysCustomerHadMovie[i] <= rentalCode[i]) {
-				System.out.printf("%-10s   %-10d  %n", name[i], rentalCode[i]
-						- daysCustomerHadMovie[i]);
+				System.out.printf("%17s   %10d  %9f", name[i], daysCustomerHadMovie[i] - rentalCode[i], lateFee[i]);
 			}
 		}
 	}
+	
 
 	public static void calculateLateFees(String[] name,
 			int[] daysCustomerHadMovie, int[] rentalCode, double[] lateFee,
@@ -57,7 +47,7 @@ public class VideoStoreSystem {
 				lateFee[i] = (daysCustomerHadMovie[i] - rentalCode[i])
 						* (rentalCode[i] > 1 ? 0.69 : 1.49);
 				// java ternary operator- condition ? value if true : value if false
-
+				
 				late[i] = true;
 			}
 		}
