@@ -13,11 +13,11 @@ public class VideoStoreSystem {
 		// should use global vars but Mr. Kulla wont let us
 		String[] name = { "Stefan", "Dylan", "Nathan", "Kevin", "Ian", "Edgar",
 				"Jane", "Mary", "Brian", "Jason" };
-		int[] customerId = { 871, 2, 873, 874, 875, 876, 8, 879, 880, 881 };
+		int[] customerId = { 871, 872, 873, 874, 875, 876, 878, 879, 880, 881 };
 		int[] movieId = { 1047, 1092, 1037, 1026, 1025, 9186, 9287, 4639, 7593,
 				4791 };
 		int[] rentalCode = { 1, 5, 1, 5, 5, 1, 1, 5, 1, 5 };
-		int[] daysCustomerHadMovie = { 0, 4, 2, 6, 5, 1, 3, 3, 2, 6 };
+		int[] daysCustomerHadMovie = { 0, 4, 2, 6, 5, 1, 17, 3, 2, 6 };
 		boolean[] late = new boolean[10];// primitive boolean initializes as
 											// false
 		double[] lateFee = new double[10];
@@ -34,7 +34,7 @@ public class VideoStoreSystem {
 		System.out.println("====== Late Customers ======");
 		System.out.printf("Customer     Days Late   Late Fees%n");
 		for (int i = 0; i < name.length; i++) {
-			if (late[i]) {
+			if (daysCustomerHadMovie[i] > rentalCode[i]) {
 				System.out.printf("%-10s   %-10d  %-9.2f%n", name[i],
 						daysCustomerHadMovie[i] - rentalCode[i], lateFee[i]);
 			}
@@ -42,7 +42,7 @@ public class VideoStoreSystem {
 		System.out.println("===== Non Late Customers =====");
 		System.out.printf("Customer     Days Left  %n");
 		for (int i = 0; i < name.length; i++) {
-			if (!late[i]) {
+			if (daysCustomerHadMovie[i] <= rentalCode[i]) {
 				System.out.printf("%-10s   %-10d  %n", name[i], rentalCode[i]
 						- daysCustomerHadMovie[i]);
 			}
