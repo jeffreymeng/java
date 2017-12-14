@@ -15,7 +15,6 @@ public class CommandLine {
 		System.out.println("In Development.");
 		System.out.println("Autorun EquationSolver Module");
 		EquationSolver.run(in.nextLine());
-		in.close();
 		
 	}
 

@@ -41,14 +41,14 @@ public class TestCheckingAccount {
 						System.out.println("Deposit Cancelled");
 					} else {
 						CheckingAccount.processDeposit(amount);
-						System.out.printf("You have made a check for $%.2f. Your balance is now $%.2f%n", amount, CheckingAccount.getBalance());
+						System.out.printf("You have made a check for $%.2f. Your balance is now $.2f%n", amount, CheckingAccount.getBalance());
 					}
 					break;
 				case 3:
 					System.out.println("Enter the amount of the check:");
 					amount = in.nextDouble();
 					while (amount < 0 || amount > CheckingAccount.getBalance()) {
-						System.out.printf("Enter a positive number less than your balance of $%.2f or zero to cancel:", CheckingAccount.getBalance());
+						System.out.printf("Enter a positive number less than $%.2f or zero to cancel:", CheckingAccount.getBalance());
 						amount = in.nextDouble();
 					}
 					if (amount == 0.0) {
@@ -61,9 +61,7 @@ public class TestCheckingAccount {
 					
 			}
 			
-			
 		}
 		System.out.println("Exited ATM");
-		in.close();
 	}
 }

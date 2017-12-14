@@ -41,7 +41,7 @@ public class TestCheckingAccount {
 						System.out.println("Deposit Cancelled");
 					} else {
 						CheckingAccount.processDeposit(amount);
-						System.out.printf("You have made a check for $%.2f. Your balance is now $%.2f%n", amount, CheckingAccount.getBalance());
+						System.out.printf("You have made a check for $%.2f. Your balance is now $.2f%n", amount, CheckingAccount.getBalance());
 					}
 					break;
 				case 3:
@@ -61,9 +61,7 @@ public class TestCheckingAccount {
 					
 			}
 			
-			
 		}
 		System.out.println("Exited ATM");
-		in.close();
 	}
 }
