@@ -1,0 +1,40 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 10, 2018
+ * Purpose:
+ */
+
+package box;
+
+import java.util.Scanner;
+
+public class BoxTest {
+
+	public static void main(String[] args) {
+		String newBox = "yes";
+		
+		String units, name;
+		int length, width, height;
+		Box[] = new Box[10];
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("BoxMaker");
+		while(newBox != "yes") {
+			System.out.println("Enter the length of your box:");
+			length = in.nextInt();
+			System.out.println("Enter the height of your box:");
+			height = in.nextInt();
+			System.out.println("Enter the width of your box:");
+			width = in.nextInt();
+			in.nextLine();
+			System.out.println("Enter the units you used for your box:");
+			units = in.nextLine();
+			System.out.println("Enter the name of your box:");
+			name = in.nextLine();
+			
+		}
+		
+		
+	}
+
+}

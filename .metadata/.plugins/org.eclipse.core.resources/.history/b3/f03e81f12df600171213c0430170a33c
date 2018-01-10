@@ -1,0 +1,15 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 10, 2018
+ * Purpose:
+ */
+
+package box;
+
+public class Box {
+	int height, width, length;
+	String name, unit;
+	public Box(length, width, height, units, name) {
+		
+	}
+}

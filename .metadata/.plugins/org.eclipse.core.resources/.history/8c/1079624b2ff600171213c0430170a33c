@@ -1,0 +1,27 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 10, 2018
+ * Purpose:
+ */
+
+package box;
+
+import java.util.Scanner;
+
+public class BoxTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner in = new Scanner(System.in);
+		String newBox = "yes";
+		String units, name;
+		int length, width, height;
+		while(newBox != "yes") {
+			
+		}
+		
+		
+	}
+
+}

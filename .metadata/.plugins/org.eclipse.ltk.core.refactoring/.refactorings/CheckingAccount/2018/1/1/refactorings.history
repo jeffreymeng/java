@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;checkingAccount&apos; to &apos;Ch7BasicOOP/src&apos;&#x0A;- Original project: &apos;CheckingAccount&apos;&#x0A;- Destination element: &apos;Ch7BasicOOP/src&apos;&#x0A;- Original element: &apos;CheckingAccount/src/checkingAccount&apos;&#x0A;- Update references to refactored element" description="Move package" destination="=Ch7BasicOOP/src" element1="/src&lt;checkingAccount" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1515083656839" version="1.0"/>
+</session>

@@ -1,0 +1,25 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 10, 2018
+ * Purpose:
+ */
+
+package box;
+
+public class Box {
+	private int height, width, length;
+	private String name, units;
+	
+	public Box(int length, int width, int height, String units, String name) {
+		this.length = length;
+		this.height = height;
+		this.width = width;
+		this.units = units;
+		this.name = name;
+	}
+	
+	public int getVolume() {
+		return (length * height * width);
+	}
+	
+}

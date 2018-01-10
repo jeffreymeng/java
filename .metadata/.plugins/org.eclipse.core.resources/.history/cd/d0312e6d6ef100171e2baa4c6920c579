@@ -1,0 +1,19 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 4, 2018
+ * Purpose:
+ */
+
+package dice;
+
+public class DiceTest {
+
+	public static void main(String[] args) {
+		Dice standard = new Dice();
+		for (int i = 0; i < 10; i ++) {
+			System.out.println(standard.sides + "-sided");
+		}
+
+	}
+
+}

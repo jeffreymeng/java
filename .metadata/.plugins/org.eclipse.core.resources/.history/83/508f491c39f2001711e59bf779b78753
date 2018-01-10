@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 5, 2018
+ * Purpose:
+ */
+
+package dice;
+
+public class DistributionTester {
+
+	public static void main(String[] args) {
+		Dice testDice = new Dice(10);
+
+	}
+
+}

@@ -1,0 +1,23 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 4, 2018
+ * Purpose:
+ */
+
+package dice;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Dice {
+	public int sides;//intentionally made public
+	public Dice(int sides) {
+		this.sides = sides;
+	}
+	public Dice() {
+		this.sides = 6;
+	}
+	public int roll() {
+		return ThreadLocalRandom.current().nextInt(1, sides + 1);
+
+	}
+}
