@@ -12,7 +12,7 @@ public class BoxTest {
 
 	public static void main(String[] args) {
 		String newBox = "yes";
-		
+
 		String units, name;
 		int length, width, height;
 		Box[] boxes = new Box[100];
@@ -20,7 +20,7 @@ public class BoxTest {
 		String input;
 		Scanner in = new Scanner(System.in);
 		System.out.println("BoxMaker");
-		while(newBox == "yes") {
+		while (newBox.equalsIgnoreCase("yes")) {
 			System.out.println("Enter the length of your box:");
 			length = in.nextInt();
 			System.out.println("Enter the height of your box:");
@@ -32,31 +32,38 @@ public class BoxTest {
 			units = in.nextLine();
 			System.out.println("Enter the name of your box:");
 			name = in.nextLine();
-			boxes[index] = new Box( length,  width,  height,  units,  name);
-			System.out.println("Your box, named " + name + " is " + length + units + "x" + width + units + "x" + height + units + "x.");
-			System.out.println("The volume of your box is: " + boxes[index].volume());
-			System.out.println("The surface area of your box is: " + boxes[index].surfaceArea());
+			boxes[index] = new Box(length, width, height, units, name);
+			System.out.println(name + " is " + length + units + " by " + width
+					+ units + " by " + height + units + ".");
+			System.out.println("The volume of your box is: "
+					+ boxes[index].volume());
+			System.out.println("The surface area of your box is: "
+					+ boxes[index].surfaceArea());
 			if (index == boxes.length) {
-				System.out.println("You have excedded your box storage quota. Enter yes to clear all boxes and create a new one, or no to quit.");
+				System.out
+						.println("You have excedded your box storage quota. Enter yes to clear all boxes and create a new one, or no to quit.");
 				input = in.nextLine();
-				while (input != "yes" && input != "no") {
+				while (!input.equalsIgnoreCase("yes")
+						&& !input.equalsIgnoreCase("no")) {
 					System.out.println("Enter yes or no");
 					input = in.nextLine();
 				}
 				if (input == "yes")
 					boxes = new Box[100];
 			} else {
-				System.out.println("Would you like to make another box(yes/no)?");
+				System.out
+						.println("Would you like to make another box(yes/no)?");
 				input = in.nextLine();
-				while (input != "yes" && input != "no") {
+				while (!input.equalsIgnoreCase("yes")
+						&& !input.equalsIgnoreCase("no")) {
 					System.out.println("Enter yes or no");
 					input = in.nextLine();
 				}
 			}
-			
+
 		}
-		
-		
+		in.close();
+
 	}
 
 }

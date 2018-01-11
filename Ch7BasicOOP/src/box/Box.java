@@ -17,6 +17,7 @@ public class Box {
 		this.units = units;
 		this.name = name;
 	}
+
 	public Box() {
 		length = 1;
 		height = 1;
@@ -48,6 +49,9 @@ public class Box {
 	}
 	public String getUnits() {
 		return units;
+	}
+	public void rename(String name) {
+		this.name = name;
 	}
 	
 }

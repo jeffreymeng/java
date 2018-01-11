@@ -7,6 +7,7 @@
 package checkingAccount;
 
 public class TransferConfirmation {
+	/* Comment to get rid of warning
 	private boolean success;
 	private double amount;
 	private CheckingAccount from;
@@ -17,5 +18,6 @@ public class TransferConfirmation {
 		from = fromAccount;
 		to = toAccount;
 	}
+	*/
 
 }
