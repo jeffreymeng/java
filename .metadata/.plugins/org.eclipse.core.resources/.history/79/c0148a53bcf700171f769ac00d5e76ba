@@ -1,0 +1,28 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 12, 2018
+ * Purpose:
+ */
+
+package cardGame;
+
+public class DisplayCards {
+	
+	public DisplayCards() {
+		
+	}
+	
+	public void showCard(boolean black) {
+		System.out.println("┌-------------┐");
+		System.out.println("|             |");
+		System.out.println("|             |");
+		System.out.println("|             |");
+		System.out.println("|             |");
+		System.out.println("|     RED     |");
+		System.out.println("|             |");
+		System.out.println("|             |");
+		System.out.println("|             |");
+		System.out.println("|             |");
+		System.out.println("└-------------┘");
+	}
+}

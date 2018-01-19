@@ -1,0 +1,17 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 12, 2018
+ * Purpose:
+ */
+
+package cardGame;
+
+public class Flip {
+	public Flip() {
+
+	}
+	//returns whether the card is red or not. (True if red, false if black).
+	public  boolean turnOverCard() {
+		
+	};
+}

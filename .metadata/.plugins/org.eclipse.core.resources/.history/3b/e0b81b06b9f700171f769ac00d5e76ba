@@ -1,0 +1,37 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 12, 2018
+ * Purpose:
+ */
+
+package cardGame;
+
+public class Game {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String unprocessedInput;
+		boolean playing = true;
+		int score = 0;
+		while(playing) {
+			PlayGame();
+			System.out.println("Would you like to play another round? Your score is currently " + score + "(yes/no).");
+			unprocessedInput = in.nextLine();
+			while(!unprocessedInput.equalsIgnoreCase("yes") || !unprocessedInput.equalsIgnoreCase("yes")) {
+				System.out.println("Choose yes or no");
+				unprocessedInput = in.nextLine();
+			}
+			if (unprocessedInput.equalsIgnoreCase("no")) {
+				playing = false;
+			}
+		}
+		
+
+	}
+
+	public static void PlayGame() {
+		
+		
+	}
+
+}
