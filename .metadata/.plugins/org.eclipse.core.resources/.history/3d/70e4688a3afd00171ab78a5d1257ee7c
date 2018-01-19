@@ -13,8 +13,4 @@ public class Calculator extends Calculation{
 	public int divide(int x, int y) {
 		return x / y;
 	}
-	public int add(int x, int y) {
-		//just to show that it overrides
-		return 1 + 1;
-	}
 }
