@@ -12,7 +12,7 @@ public class CalcTest {
 		Calculation c = new Calculation();
 		System.out.println("Add: " + c.add(5, 3));
 		System.out.println("Subtract: " + c.subtract(5, 3));
-		
+
 	}
 
 }

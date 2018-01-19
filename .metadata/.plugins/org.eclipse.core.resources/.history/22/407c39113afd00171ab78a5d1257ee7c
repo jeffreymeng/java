@@ -1,18 +1,17 @@
 /*
  * Programmer: Jeffrey Meng
  * Date: Jan 19, 2018
- * Purpose: Calculator Test
+ * Purpose:
  */
 
 package calc;
 
-public class CalcTest {
-
+public class CalculatorTest {
 	public static void main(String[] args) {
-		Calculation c = new Calculation();
+		Calculator c = new Calculator();
 		System.out.println("Add: " + c.add(5, 3));
 		System.out.println("Subtract: " + c.subtract(5, 3));
-		
+		System.out.println("Add: " + c.mutiply(5, 3));
+		System.out.println("Subtract: " + c.subtract(5, 3));
 	}
-
 }
