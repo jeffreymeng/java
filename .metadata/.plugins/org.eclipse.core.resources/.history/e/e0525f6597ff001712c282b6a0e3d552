@@ -1,0 +1,18 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 22, 2018
+ * Purpose:
+ */
+
+package vehicles;
+
+public class TestVehicle {
+
+	public static void main(String[] args) {
+		Vehicle v1 = new Vehicle();
+		Vehicle v2 = new Vehicle("Acura", 2005, 7, 4);
+		
+
+	}
+
+}

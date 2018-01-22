@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 22, 2018
+ * Purpose:
+ */
+
+package vehicles;
+
+public class TestVehicle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
