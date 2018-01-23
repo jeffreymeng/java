@@ -1,0 +1,14 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 23, 2018
+ * Purpose:
+ */
+
+package vehicles;
+
+public class Truck extends Vehicle {
+	protected int towingWeight, cargoArea, wheels, origionalPrice;
+	protected String towingWeightUnits;
+	
+	
+}

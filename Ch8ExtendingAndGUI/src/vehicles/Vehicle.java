@@ -6,7 +6,7 @@
 
 package vehicles;
 
-import Utils.Confirmation;
+//import Utils.Confirmation;
 
 public class Vehicle {
 	protected String manufacturer;

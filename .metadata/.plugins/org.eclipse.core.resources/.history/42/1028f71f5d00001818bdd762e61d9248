@@ -1,0 +1,20 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 22, 2018
+ * Purpose:
+ */
+
+package utils;
+
+public class Confirmation<Type> {
+	private boolean success;
+	private String newValueStr
+	private String errorCode, errorMessage, type;
+	private int errorId;
+	public Confirmation() {
+		
+	}
+	public String errorCode() {
+		return errorCode;
+	}
+}

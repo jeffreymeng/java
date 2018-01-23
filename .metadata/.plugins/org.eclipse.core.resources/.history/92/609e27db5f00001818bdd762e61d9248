@@ -1,0 +1,38 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 22, 2018
+ * Purpose:
+ */
+
+package utils;
+
+//https://docs.oracle.com/javase/tutorial/java/generics/types.html
+public class Confirmation<Type> {
+	private boolean success;
+	private Type currentValue, requestedValue;
+	private Type oldValue;
+	private String errorCode, errorMessage, type;
+	private int errorId;
+
+	public Confirmation() {
+		
+	}
+
+	public String errorCode() {
+		if (success) {
+			return "SUCCESS";
+		} else {
+			return errorCode;
+		}
+	}
+	
+	public String currentValue() {
+		if (success) {
+			return "SUCCESS";
+		} else {
+			return errorCode;
+		}
+	}
+	
+	
+}

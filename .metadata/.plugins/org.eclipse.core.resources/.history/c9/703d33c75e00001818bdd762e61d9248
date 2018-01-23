@@ -1,0 +1,60 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 23, 2018
+ * Purpose:
+ */
+
+package vehicles;
+
+public class Truck extends Vehicle {
+	protected int towingWeight, cargoArea, wheels, originalPrice;
+
+	
+	public Truck() {
+
+		super("[DEFUALT]", 2018, 4, 5);
+
+	}
+
+	public Truck(String manufacturer, int year, int doors, int passengers, int towingWeight, int cargoArea, int wheels, int originalPrice) {
+
+		super(manufacturer, year, doors, passengers);
+
+	}
+	
+	public int getTowingWeight() {
+		return towingWeight;
+	}
+	public void setTowingWeight(int towingWeight) {
+		this.towingWeight = towingWeight;
+	}
+	public int getCargoArea() {
+		return cargoArea;
+	}
+	public void setCargoArea(int cargoArea) {
+		this.cargoArea = cargoArea;
+	}
+	public int getWheels() {
+		return wheels;
+	}
+	public void setWheels(int wheels) {
+		this.wheels = wheels;
+	}
+	public int getOrigionalPrice() {
+		return originalPrice;
+	}
+	public void setOrigionalPrice(int origionalPrice) {
+		this.originalPrice = origionalPrice;
+	}
+
+	
+	public double getValue(int year) {
+		double value = 0.0;
+		
+		
+		
+		return value;
+	}
+	
+	
+}

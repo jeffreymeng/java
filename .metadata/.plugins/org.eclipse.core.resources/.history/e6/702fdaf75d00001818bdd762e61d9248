@@ -1,0 +1,11 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 23, 2018
+ * Purpose:
+ */
+
+package vehicles;
+
+public class Truck {
+
+}
