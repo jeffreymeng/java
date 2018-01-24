@@ -35,7 +35,12 @@ public class Vehicle {
 		
 		return manufacturer;
 	}
-
+	public void displayInfo() {
+		System.out.println("Year: " + year);
+		System.out.println("Manufacturer " + manufacturer);
+		System.out.println("Doors: " + doors);
+		System.out.println("Passengers: " + passengers);
+	}
 	public void setManufacturer(String manufacturer) {
 		//TODO: return Confirmation class to confirm set.
 		this.manufacturer = manufacturer;

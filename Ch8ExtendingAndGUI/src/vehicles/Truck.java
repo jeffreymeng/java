@@ -33,7 +33,13 @@ public class Truck extends Vehicle {
 		this.originalPrice = originalPrice;
 
 	}
-
+	public void DisplayInfo() {
+		super.displayInfo();
+		System.out.println("Towing Weight: " + towingWeight);
+		System.out.println("CargoArea " + cargoArea);
+		System.out.println("Wheels: " + wheels);
+		System.out.println("Origional Price: " + originalPrice);
+	}
 	public int getTowingWeight() {
 		return towingWeight;
 	}
@@ -66,10 +72,13 @@ public class Truck extends Vehicle {
 		this.originalPrice = origionalPrice;
 	}
 
-	public double getValue(int year) {
-		double value = 0.0;
-
+	public double getValue(int currentYear) {
+		double value = originalPrice * 0.85;//as soon as you purchase, the value goes down by 15%
+		value = value * Math.pow((0.85), currentYear - year);
+		
+		
 		return value;
 	}
+	
 
 }
