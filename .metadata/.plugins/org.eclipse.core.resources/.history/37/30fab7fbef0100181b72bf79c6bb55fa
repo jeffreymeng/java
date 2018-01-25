@@ -1,0 +1,22 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 25, 2018
+ * Purpose:
+ */
+
+package bankAccount;
+
+public class Customer {
+	String name;
+	int id;
+	double balance;
+	public Customer() {
+		//this is bad, we want them to use the other constructor.
+		name = "UNKNOWN";
+		id = -1;
+		balance = 0.0;
+	}
+	public Customer(String name, int id) {
+		
+	}
+}

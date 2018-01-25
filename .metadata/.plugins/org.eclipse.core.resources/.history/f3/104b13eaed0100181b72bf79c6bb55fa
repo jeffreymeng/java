@@ -1,0 +1,13 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 25, 2018
+ * Purpose:
+ */
+
+package vehicles;
+
+public class VehicleUI {
+	public static void main(String[] args) {
+		System.out.println("Vehicle Maker 2000");
+	}
+}
