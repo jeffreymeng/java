@@ -1,0 +1,11 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 29, 2018
+ * Purpose:
+ */
+
+package bankAccount;
+
+public class CheckingAccount extends BankAccount {
+
+}

@@ -1,0 +1,22 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 25, 2018
+ * Purpose:
+ */
+
+package bankAccount;
+
+public class SavingsAccount extends BankAccount {
+	double intrest;
+	public SavingsAccount(Customer owner, double startingBalance) {
+		super(owner, startingBalance);
+	}
+	
+	public SavingsAccount() {
+		super();
+	}
+	
+	public payIntrest() {
+		balance -= (balance * intrest)
+	}
+}

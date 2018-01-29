@@ -7,9 +7,9 @@
 package bankAccount;
 
 public class BankAccount {
-	Customer owner;
-	double balance;
-	int accountNumber;
+	protected Customer owner;
+	protected double balance;
+	private int accountNumber;
 	//TODO: in Utils, create a confirmation class.
 	//in utils, also make a setter confirmation class that extends confirmation.
 	//then, in bank account, make withdraw and deposit confirmations.
@@ -34,10 +34,14 @@ public class BankAccount {
 		return accountNumber;
 	}
 	
-	public WithdrawConfirmation withdraw() {
+	public void withdraw(double amount) {
 		
-		return new WithdrawConfirmation();
+		this.balance -= amount;
 		
+	}
+	
+	public void deposit(double amount) {
+		this.balance =+ amount;
 	}
 	
 }

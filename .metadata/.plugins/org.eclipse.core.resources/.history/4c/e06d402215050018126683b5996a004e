@@ -1,0 +1,24 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 25, 2018
+ * Purpose:
+ */
+
+package bankAccount;
+
+public class SavingsAccount extends BankAccount {
+	double intrest = 0.0;
+	public SavingsAccount(Customer owner, double startingBalance) {
+		super(owner, startingBalance);
+	}
+	
+	public SavingsAccount() {
+		super();
+	}
+	
+	public void payIntrest() {
+		super.withdraw(balance * intrest);
+	}
+	
+	
+}

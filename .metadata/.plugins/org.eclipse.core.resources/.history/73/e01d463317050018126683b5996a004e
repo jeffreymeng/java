@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 29, 2018
+ * Purpose:
+ */
+
+package bankAccount;
+
+public class BankAccountTest {
+
+	public static void main(String[] args) {
+		Customer owner = new Customer();
+
+	}
+
+}
