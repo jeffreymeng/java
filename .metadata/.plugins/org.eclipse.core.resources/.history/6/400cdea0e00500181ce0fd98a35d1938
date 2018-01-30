@@ -14,7 +14,6 @@ public class BankAccountTest {
 		CheckingAccount checkingAccount = new CheckingAccount(owner, 0.0);
 		owner.setSavingsAccount(savingsAccount);
 		owner.setCheckingAccount(checkingAccount);
-		
 		System.out.printf("$%.2f%n", checkingAccount.reportBalance());
 		System.out.printf("$%.2f%n", savingsAccount.reportBalance());
 		
