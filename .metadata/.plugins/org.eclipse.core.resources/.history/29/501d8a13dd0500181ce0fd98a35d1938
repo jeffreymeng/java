@@ -15,24 +15,24 @@ public class BankAccountTest {
 		owner.setSavingsAccount(savingsAccount);
 		owner.setCheckingAccount(checkingAccount);
 		System.out.printf("$%.2f%n", checkingAccount.reportBalance());
-		System.out.printf("$%.2f%n", savingsAccount.reportBalance());
+		System.out.printf("$%.2f", savingsAccount.reportBalance());
 		
 		savingsAccount.deposit(100.0);
 		checkingAccount.deposit(25.25);
 		
-		System.out.printf("$%.2f%n", checkingAccount.reportBalance());
-		System.out.printf("$%.2f%n", savingsAccount.reportBalance());
+		System.out.printf("$%.2f", checkingAccount.reportBalance());
+		System.out.printf("$%.2f", savingsAccount.reportBalance());
 		
 		savingsAccount.withdraw(74.95);
 		checkingAccount.withdraw(20.25);
 		
-		System.out.printf("$%.2f%n", checkingAccount.reportBalance());
-		System.out.printf("$%.2f%n", savingsAccount.reportBalance());
+		System.out.printf("$%.2f", checkingAccount.reportBalance());
+		System.out.printf("$%.2f", savingsAccount.reportBalance());
 		
-		checkingAccount.withdraw(10.05);
+		checkingAccount.withdraw(10.95);
 		
-		System.out.printf("$%.2f%n", checkingAccount.reportBalance());
-		System.out.printf("$%.2f%n", savingsAccount.reportBalance());
+		System.out.printf("$%.2f", checkingAccount.reportBalance());
+		System.out.printf("$%.2f", savingsAccount.reportBalance());
 		
 
 	}

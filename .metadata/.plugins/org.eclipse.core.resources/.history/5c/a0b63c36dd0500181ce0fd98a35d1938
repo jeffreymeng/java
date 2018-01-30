@@ -29,7 +29,7 @@ public class BankAccountTest {
 		System.out.printf("$%.2f%n", checkingAccount.reportBalance());
 		System.out.printf("$%.2f%n", savingsAccount.reportBalance());
 		
-		checkingAccount.withdraw(10.05);
+		checkingAccount.withdraw(10.95);
 		
 		System.out.printf("$%.2f%n", checkingAccount.reportBalance());
 		System.out.printf("$%.2f%n", savingsAccount.reportBalance());
