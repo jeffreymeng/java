@@ -1,0 +1,22 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Jan 31, 2018
+ * Purpose:
+ */
+
+package bankAccount;
+
+public class WithdrawConfirmation<Type> extends utils.ValueChangeConfirmation {
+		public WithdrawConfirmation() {
+			super();
+			
+		}
+		public WithdrawConfirmation(boolean success, String type, Type currentValue, Type oldValue, Type requestedValue) {
+			super(success, type, currentValue, oldValue, requestedValue);
+		}
+		public WithdrawConfirmation(boolean success, String errorCode, String errorMessage, int errorId, String type,
+				Type currentValue, Type oldValue, Type requestedValue) {
+			super(success, errorCode, errorMessage, errorId, type, currentValue, oldValue, requestedValue);
+		}
+	
+}

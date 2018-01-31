@@ -14,9 +14,9 @@ public class Customer {
 	CheckingAccount checkingAccount;
 	public Customer() {
 		//this is bad, we want them to use the other constructor.
-		name = "UNKNOWN";
+		name = "";
 		id = -1;
-		yearsOfService = 0;
+		yearsOfService = -1;
 		savingsAccount = new SavingsAccount();
 		checkingAccount = new CheckingAccount();
 	}

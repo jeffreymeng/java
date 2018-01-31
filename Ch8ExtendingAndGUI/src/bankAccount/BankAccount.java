@@ -34,9 +34,10 @@ public class BankAccount {
 		return accountNumber;
 	}
 	
-	public void withdraw(double amount) {
+	public WithdrawConfirmation withdraw(double amount) {
 		
 		this.balance -= amount;
+		return new WithdrawConfirmation(true, owner, amount + balance, balance, balance);
 		
 	}
 	
