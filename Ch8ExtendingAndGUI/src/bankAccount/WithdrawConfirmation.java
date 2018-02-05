@@ -7,6 +7,7 @@
 package bankAccount;
 
 public class WithdrawConfirmation extends utils.ValueChangeConfirmation<Double> {
+	 	String action;
 		public WithdrawConfirmation() {
 			super();
 			
@@ -19,4 +20,7 @@ public class WithdrawConfirmation extends utils.ValueChangeConfirmation<Double> 
 			super(success, errorCode, errorMessage, errorId, "double", currentValue, oldValue, requestedValue);
 		}
 		
+		public void action() {
+			
+		}
 }

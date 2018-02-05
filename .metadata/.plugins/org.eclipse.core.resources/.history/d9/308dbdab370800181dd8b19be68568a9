@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 2, 2018
+ * Purpose:
+ */
+
+package basicSwing;
+
+public class BasicButton {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
