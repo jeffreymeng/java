@@ -16,16 +16,16 @@ public class CheckingAccount extends BankAccount {
 		super(owner, startingBalance);
 	}
 
-	public void withdraw(double amount) {
+	public WithdrawConfirmation withdraw(double amount) {
 		if (balance < amount) {
 			if (super.getOwner().getSavingAccount().reportBalance() > amount) {
 				// if the owner's checking account has enough, withdraw from there.
-				super.getOwner().getSavingAccount().withdraw(amount);
+				return super.getOwner().getSavingAccount().withdraw(amount);
 			} else {
-				super.withdraw(amount);
+				return super.withdraw(amount);
 			}
 		} else {
-			super.withdraw(amount);
+			return super.withdraw(amount);
 		}
 	}
 }
