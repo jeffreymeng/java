@@ -1,0 +1,41 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 6, 2018
+ * Purpose:
+ */
+
+package graphics;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+public class GraphicsPanel extends JPanel{
+	
+	public void paintComponent(Graphics graphics) {
+		super.paintComponent(graphics);
+		
+		graphics.setColor(new Color(222, 184, 135));
+		graphics.fillRect(10, 10, 200, 100);
+		
+		
+	}
+	
+	public void setupWindow(GraphicsPanel panel) {
+		JFrame frame = new JFrame("Main Frame");
+		
+		frame.setSize(800, 600);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		frame.setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		GraphicsPanel panel = new GraphicsPanel();
+		panel.setupWindow(panel);
+		
+
+	}
+
+}
