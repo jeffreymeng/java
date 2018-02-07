@@ -30,21 +30,15 @@ public class GraphicsPanel extends JPanel{
 		
 		graphics.setColor(Color.RED);
 		
-		
+		Polygon triangle = new Polygon();
+		triangle.addPoint(100, 100);
+		triangle.addPoint(200, 100);
+		triangle.addPoint(150, 200);
 		
 		graphics.setColor(Color.ORANGE);
-		graphics.fillOval(30, 30,  (int) (((width + height) / 2) * 0.15), (int) (((width + height) / 2) * 0.15));
+		graphics.fillOval(100, 100,  (int) (width * 0.25), (int) (width * 0.25));
 		
-		graphics.setColor(Color.GREEN);
-		graphics.fillRect(450, 400, 100, 500);
-		graphics.setColor(Color.RED);
-		Polygon triangle = new Polygon();
-		triangle.addPoint(400, 400);
-		triangle.addPoint(600, 400);
-		triangle.addPoint(500, 300);
-		graphics.fillPolygon(triangle);
-		
-		
+		graphics.drawPolygon(triangle);
 	}
 	
 	public void setupWindow(GraphicsPanel panel) {
