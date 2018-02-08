@@ -1,0 +1,23 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 8, 2018
+ * Purpose:
+ */
+
+package mouse;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class MousePanel extends JPanel implements ActionListener, MouseListener{
+
+	public static void main(String[] args) {
+		
+		
+	}
+	public MousePanel() {
+		addMouseListener(this);
+	}
+
+}

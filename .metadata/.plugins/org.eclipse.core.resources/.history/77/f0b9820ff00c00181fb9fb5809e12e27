@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 8, 2018
+ * Purpose:
+ */
+
+package mouse;
+
+public class MousePanel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
