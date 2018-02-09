@@ -1,0 +1,11 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 9, 2018
+ * Purpose:
+ */
+
+package mouse;
+
+public class CatchRectanglePanel {
+
+}
