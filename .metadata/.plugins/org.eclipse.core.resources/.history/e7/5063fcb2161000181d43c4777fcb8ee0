@@ -1,0 +1,100 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 9, 2018
+ * Purpose:
+ */
+
+package mouse;
+
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class DrawAtClickPanel extends JPanel implements MouseListener {
+	public JFrame frame = new JFrame("Mouse Panel");
+	public static DrawAtClickPanel panel;
+	
+
+	
+	//ArrayList<Integer[]> shapes = new ArrayList<Integer[]>();
+	//https://www.geeksforgeeks.org/arraylist-in-java/
+	
+	int [][] shapes = new Integer[ Integer.MAX_VALUE - 5];
+	//each element of the arraylist is a shape
+	//second level is [r, g, b, a, x, y, width]
+	//hashmap easier. Could also make a shape class.
+	
+	static int width;
+	static int height;
+
+	public static void main(String[] args) {
+		panel = new DrawAtClickPanel();
+		panel.setupWindow(panel);
+		width = panel.getWidth();
+		height = panel.getHeight();
+
+	}
+
+	public DrawAtClickPanel() {
+		addMouseListener(this);
+	}
+
+	public void paintComponent(Graphics graphics) {
+		super.paintComponent(graphics);
+		
+		for (int i = 0; i < shapes.size(); i ++) {
+			graphics.setColor(new Color(shapes.get(i)[0], shapes.get(i)[1], shapes.get(i)[2], shapes.get(i)[3]));
+			graphics.drawOval(shapes.get(i)[4], shapes.get(i)[5], shapes.get(i)[6], shapes.get(i)[6]);
+		}
+
+		
+
+		
+	}
+
+	public void setupWindow(DrawAtClickPanel panel) {
+		
+		frame.setSize(600, 600);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		//frame.setResizable(false);
+
+		frame.setVisible(true);
+	}
+
+	public void mouseClicked(MouseEvent e) {
+		int sides = ThreadLocalRandom.current().nextInt(2, 11);//random number in range(min, max + 1)
+		int r = ThreadLocalRandom.current().nextInt(0, 256);
+		int g = ThreadLocalRandom.current().nextInt(0, 256);
+		int b = ThreadLocalRandom.current().nextInt(0, 256);
+		double a = ((double) (ThreadLocalRandom.current().nextDouble(0, 101))) / 100;
+		int b = ThreadLocalRandom.current().nextInt(0, 256);
+		shapes.add([r, g, b, a]);
+
+	}
+
+	public void mousePressed(MouseEvent e) {
+		
+
+	}
+
+	public void mouseReleased(MouseEvent e) {
+		
+
+	}
+
+	public void mouseEntered(MouseEvent e) {
+		// System.out.println("Mouse entered");
+
+	}
+
+	public void mouseExited(MouseEvent e) {
+		// System.out.println("Mouse exited");
+
+	}
+
+}
