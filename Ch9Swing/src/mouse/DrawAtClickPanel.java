@@ -20,7 +20,7 @@ public class DrawAtClickPanel extends JPanel implements MouseListener {
 	// ArrayList<Integer[]> shapes = new ArrayList<Integer[]>();
 	// https://www.geeksforgeeks.org/arraylist-in-java/
 
-	int[][] shapes = new int[ /* Integer.MAX_VALUE - 5 */1000000][7];
+	int[][] shapes = new int[ /* Integer.MAX_VALUE - 5 */1000000][8];
 	int numShapes = 0;
 
 	// each element of the arraylist is a shape
@@ -51,12 +51,20 @@ public class DrawAtClickPanel extends JPanel implements MouseListener {
 		for (int i = 0; i < numShapes; i++) {
 			graphics.setColor(new Color(shapes[i][0], shapes[i][1],
 					shapes[i][2], shapes[i][3]));
+			
+			int x = shapes[i][4];
+			int y = shapes[i][5];
+			int size = shapes[i][6];
+			
+			//add half the size of a side to get the x and y centered
+			x = x - (int) ((size)/2.0);
+			y = y - (int) ((size)/2.0);
 			if (shapes[i][7] == 1) {
-				graphics.fillRect(shapes[i][4], shapes[i][5], shapes[i][6],
-						shapes[i][6]);
+				// Shape is a square
+				graphics.fillRect(x, y, size, size);
 			} else {
-				graphics.fillOval(shapes[i][4], shapes[i][5], shapes[i][6],
-						shapes[i][6]);
+				// Shape is a circle
+				graphics.fillOval(x, y, size, size);
 			}
 		}
 
@@ -82,6 +90,7 @@ public class DrawAtClickPanel extends JPanel implements MouseListener {
 	}
 
 	public void mouseReleased(MouseEvent e) {
+		
 		shapes[numShapes][0] = ThreadLocalRandom.current().nextInt(0, 256);// random
 		// number
 		// in
@@ -95,12 +104,13 @@ public class DrawAtClickPanel extends JPanel implements MouseListener {
 		shapes[numShapes][4] = e.getX();
 		shapes[numShapes][5] = e.getY();
 		shapes[numShapes][6] = ThreadLocalRandom.current().nextInt(20,
-				(int) (((height + width) / 2) * 0.15));
+				(int) (((height + width) / 2) * 0.25));
 		shapes[numShapes][7] = ThreadLocalRandom.current().nextInt(1, 3);
 
 		numShapes++;
 
 		frame.repaint();
+		
 	}
 
 	public void mouseEntered(MouseEvent e) {
@@ -110,7 +120,6 @@ public class DrawAtClickPanel extends JPanel implements MouseListener {
 
 	public void mouseExited(MouseEvent e) {
 		// System.out.println("Mouse exited");
-
 	}
 
 }
