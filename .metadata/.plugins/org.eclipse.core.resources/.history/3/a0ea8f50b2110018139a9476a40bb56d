@@ -1,0 +1,64 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 14, 2018
+ * Purpose:
+ */
+
+package animation;
+
+import graphics.GraphicsPanel;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class BounceMovement extends JPanel implements ActionListener {
+	int x = 100;
+	int y = 100;
+	double ys = 1;// speed
+	double xs = 1;
+	int rectwidth;
+	int rectheight;
+	JFrame frame = new JFrame("Main Frame");
+
+	public static void main(String[] args) {
+		BounceMovement panel = new BounceMovement();
+		panel.setupWindow(panel);
+		panel.Test();
+	}
+
+	public void paintComponent(Graphics graphics) {
+		super.paintComponent(graphics);
+
+		graphics.setColor(new Color(153, 204, 255));
+		graphics.fillRect(x, y, rectwidth, rectheight);
+
+	}
+
+	public void setupWindow(BounceMovement panel) {
+
+		frame.setSize(width, height);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		frame.setVisible(true);
+
+	}
+
+	public void Test() {
+		Timer t = new Timer(10, this);
+		t.start();
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		x += (int) xs;
+		y += (int) xs;
+		xs += 0.1;
+		ys += 0.01;
+		if (x > )
+		
+		frame.repaint();
+	}
+
+}

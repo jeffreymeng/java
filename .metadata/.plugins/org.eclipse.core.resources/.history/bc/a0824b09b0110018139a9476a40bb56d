@@ -1,0 +1,25 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 14, 2018
+ * Purpose:
+ */
+
+package animation;
+
+import java.awt.*;
+
+public class BasicMovement {
+
+	public static void main(String[] args) {
+		
+
+	}
+	public void Test() {
+		Timer t = new Timer(500, this);
+		t.start();
+	}
+	public void actionPerformed(ActionEvent e) {
+		System.out.println("Hi");
+	}
+
+}

@@ -1,0 +1,82 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 14, 2018
+ * Purpose:
+ */
+
+package animation;
+
+import graphics.GraphicsPanel;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Polygon;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+
+public class BasicMovement implements ActionListener {
+	final int x = 100;
+	final int y = 100;
+	JFrame frame = new JFrame("Main Frame");
+	
+	
+	public static void main(String[] args) {
+		BasicMovement panel = new BasicMovement();
+		panel.setupWindow(panel);
+		
+
+	}
+	
+	
+	public void paintComponent(Graphics graphics) {
+		int width = frame.getWidth();
+		int height = frame.getHeight();
+		super.paintComponent(graphics);
+		
+		graphics.setColor(new Color(153, 204, 255));
+		graphics.fillRect(0, 0, width, height);
+		
+		graphics.setColor(new Color(222, 184, 135));
+		/*Draw a brown rectangle flush to the bottom of the panel*/
+		graphics.fillRect(0, (int) (height * 0.85), width, height);
+		
+		graphics.setColor(Color.RED);
+		
+		
+		
+		graphics.setColor(Color.ORANGE);
+		graphics.fillOval(30, 30,  (int) (((width + height) / 2) * 0.15), (int) (((width + height) / 2) * 0.15));
+		
+		graphics.setColor(Color.GREEN);
+		graphics.fillRect(450, 400, 100, 500);
+		graphics.setColor(Color.RED);
+		Polygon triangle = new Polygon();
+		triangle.addPoint(400, 400);
+		triangle.addPoint(600, 400);
+		triangle.addPoint(500, 300);
+		graphics.fillPolygon(triangle);
+		
+		
+	}
+	
+	public void setupWindow(GraphicsPanel panel) {
+		
+		
+		frame.setSize(width, height);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		frame.setVisible(true);
+		
+	}
+	public void Test() {
+		Timer t = new Timer(500, this);
+		t.start();
+	}
+	public void actionPerformed(ActionEvent e) {
+		System.out.println("Hi");
+	}
+
+}
