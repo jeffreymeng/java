@@ -1,0 +1,73 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 15, 2018
+ * Purpose:
+ */
+
+package animation;
+
+import graphics.GraphicsPanel;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class BlockMovement extends JPanel implements ActionListener {
+
+	int rectwidth = 50;
+	int rectheight = 50;
+	int width = 600;
+	int height = 400;
+	
+	JFrame frame = new JFrame("Main Frame");
+	Block block;
+	
+	public static void main(String[] args) {
+		BlockMovement panel = new BlockMovement();
+		panel.setupWindow(panel);
+		
+		
+	}
+
+	public void paintComponent(Graphics graphics) {
+		super.paintComponent(graphics);
+
+		graphics.setColor(new Color(153, 204, 255));
+		graphics.fillRect(x, y, rectwidth, rectheight);
+
+	}
+
+	public void setupWindow(BlockMovement panel) {
+		 block = new Block(30, frame, rectwidth, rectheight);
+		
+		frame.setSize(width, height);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		frame.setVisible(true);
+
+	}
+
+	public void Test() {
+		Timer t = new Timer(5, this);
+		t.start();
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		x += (int) xs;
+		y += (int) ys;
+		
+		if ((x + rectwidth) >= width || (x) <= 0) {
+			xs *= -1;
+			
+		}
+		if ((y + rectheight) >= height || (y) <= 0) {
+			ys *= -1;
+			
+		}
+		
+		frame.repaint();
+	}
+
+}

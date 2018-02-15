@@ -1,0 +1,11 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 15, 2018
+ * Purpose:
+ */
+
+package animation;
+
+public class BlockMovement {
+
+}
