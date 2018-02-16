@@ -14,17 +14,21 @@ import javax.swing.Timer;
 public class Block implements ActionListener {
 	int windowWidth, windowHeight, framerate, rectWidth, rectHeight;
 	int x, y;
-	double xs = 1, ys = 1;
-	JFrame frame;
+	double dx = 1, dy = 1;
+	JFrame frame = null;
 	Timer timer;
-
+	//TODO: change to array list
+	Block[] watching = new Block[100];
+	int numWatching;
 	public Block() {
 		this.windowWidth = 600;
 		this.windowHeight = 400;
 		this.framerate = 30;
 		this.rectWidth = 50;
 		this.rectHeight = 50;
-		this.frame = new JFrame();
+		this.frame = null;//will not work until you call setFrame()
+		this.x = 0;
+		this.y = 0;
 
 	}
 
@@ -34,9 +38,20 @@ public class Block implements ActionListener {
 		this.rectWidth = rectWidth;
 		this.rectHeight = rectHeight;
 		this.frame = frame;
+		this.x = 0;
+		this.y = 0;
 
 	}
+	public Block(int framerate, JFrame frame, int rectWidth, int rectHeight, int startX, int startY) {
 
+		this.framerate = framerate;
+		this.rectWidth = rectWidth;
+		this.rectHeight = rectHeight;
+		this.frame = frame;
+		this.x = startX;
+		this.y = startY;
+
+	}
 	public void start() {
 		timer = new Timer((int) 1000.0 / framerate, this);
 		timer.start();
@@ -54,33 +69,81 @@ public class Block implements ActionListener {
 		return y;
 	}
 
-	public double getXspeed() {
-		return xs;
+	public double getDeltaX() {
+		return dx;
 	}
 
-	public double getYspeed() {
-		return ys;
+	public double getDeltaY() {
+		return dy;
 	}
 	public void setXspeed(double speed) {
-		xs = speed;
+		dx = speed;
 	}
 	public void setYspeed(double speed) {
-		ys = speed;
+		dy = speed;
 	}
+	
+	public void setFrame(JFrame frame) {
+		this.frame = frame;
+	}
+	public JFrame getFrame() {
+		return frame;
+	}
+	public void restart() {
+		timer.restart();
+		x = 0; y = 0;
+	}
+	public void restart(int x, int y) {
+		timer.restart();
+		this.x = x;
+		this.y = y;
+	}
+	public void detect(Block block) {
+		this.watching[numWatching] = block;
+		//num watching starts counting at 1, so the numWatching will be the index of the first open slot.
+		this.numWatching ++;
+	}
+	
 	public void actionPerformed(ActionEvent e) {
-		x += (int) xs;
-		y += (int) ys;
-
-		if ((x + rectWidth) >= frame.getContentPane().getWidth() || (x) <= 0) {
-			xs *= -1;
+		x += (int) dx;
+		y += (int) dy;
+		int width, height;
+		if (frame == null) {
+			 width = 600;
+			 height = 400;
+		} else {
+			 width = frame.getContentPane().getHeight();
+			 height = frame.getContentPane().getWidth();
+		}
+		if ((x + rectWidth) >= width || (x) <= 0) {
+			dx *= -1;
 
 		}
-		if ((y + rectHeight) >= frame.getContentPane().getHeight() || (y) <= 0) {
-			ys *= -1;
+		if ((y + rectHeight) >= height || (y) <= 0) {
+			dy *= -1;
 
+		}
+		for (int i = 0; i < numWatching; i ++) {
+			//logic for x
+			/*
+			 * 
+			 * 
+			 * 
+			 */
+			//TODO: finish
+			if ((x + rectWidth) >= watching[i].getX() || (x) <= 0) {
+				dx *= -1;
+
+			}
+			if ((y + rectHeight) >= watching[i].getY() || (y) <= 0) {
+				dy *= -1;
+
+			}
 		}
 		System.out.println(x);
-		frame.repaint();
+		if (frame != null) {
+			frame.repaint();
+		}
 
 	}
 
