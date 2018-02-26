@@ -1,0 +1,19 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 26, 2018
+ * Purpose:
+ */
+
+package image;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class BackgroundPanel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

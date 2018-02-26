@@ -1,0 +1,54 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Feb 26, 2018
+ * Purpose:
+ */
+
+package image;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class BackgroundPanel extends JPanel{
+
+	private Image img;
+	private int imgWidth;
+	private int imgHeight;
+	
+	private BackgroundPanel() {
+		ImageIcon i = new ImageIcon("src/img/background.jpg");
+		img = i.getImage();
+		imgWidth = img.getWidth(null);
+		imgHeight = img.getHeight(null);
+		
+	}
+	
+	public int getWidth() {
+		return imgWidth;
+	}
+	
+	public int getHeight() {
+		return imgHeight;
+	}
+	
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+	}
+	
+	public void setupWindow(BackgroundPanel  panel) {
+		frame.setSive(panel.getWidth(), panel.getHeight());
+		frame.setLocationRelativeTo(null);
+		frame.setDefualtCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		frame.setVisible(true;)
+	}
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("Background");
+		BackgroundPanel p = new BackgroundPanel();
+		p.setupWindow(p);
+	}
+	}
+	
+	
+	
+}
