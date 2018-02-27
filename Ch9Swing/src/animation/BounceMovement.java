@@ -46,11 +46,13 @@ public class BounceMovement extends JPanel implements ActionListener {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(panel);
 		frame.setVisible(true);
+		width = frame.getContentPane().getWidth();//not really needed, this should be the same as the frame width.
+		height = frame.getContentPane().getHeight();//the content pane is the height minus the top title bar.
 
 	}
 
 	public void Test() {
-		Timer t = new Timer(5, this);
+		Timer t = new Timer(10, this);
 		t.start();
 	}
 
