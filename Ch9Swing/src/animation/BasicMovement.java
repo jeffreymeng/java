@@ -6,13 +6,12 @@
 
 package animation;
 
-import graphics.GraphicsPanel;
-
 import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class BasicMovement extends JPanel implements ActionListener {
 	int x = 100;
 	int y = 100;

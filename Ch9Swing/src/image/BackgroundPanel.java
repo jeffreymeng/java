@@ -11,6 +11,7 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class BackgroundPanel extends JPanel implements ActionListener,
 		KeyListener {
 	static JFrame frame;

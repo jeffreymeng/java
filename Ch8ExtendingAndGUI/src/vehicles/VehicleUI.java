@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class VehicleUI {
 	public static void main(String[] args) {
-		int type = 0;
+		//int type = 0;
 		String manufacturer;
 		int year, doors,passengers, towingWeight, cargoArea, wheels, originalPrice;
 		Truck t;

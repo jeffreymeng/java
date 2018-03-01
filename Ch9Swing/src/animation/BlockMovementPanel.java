@@ -11,6 +11,7 @@ import java.awt.*;
 
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class BlockMovementPanel extends JPanel  {
 
 	int rectwidth = 50;

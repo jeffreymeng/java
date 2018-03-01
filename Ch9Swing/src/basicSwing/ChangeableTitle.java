@@ -36,5 +36,7 @@ public class ChangeableTitle {
 		f.setSize(Integer.parseInt(size[0]), Integer.parseInt(size[1]));
 		//center it again
 		f.setLocationRelativeTo(null);
+		
+		in.close();
 	}
 }

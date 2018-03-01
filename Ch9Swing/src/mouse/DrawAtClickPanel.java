@@ -10,9 +10,9 @@ import javax.swing.*;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
+@SuppressWarnings("serial")
 public class DrawAtClickPanel extends JPanel implements MouseListener {
 	public JFrame frame = new JFrame("Mouse Panel");
 	public static DrawAtClickPanel panel;

@@ -8,9 +8,9 @@ package mouse;
 
 import javax.swing.*;
 
-import java.awt.*;
 import java.awt.event.*;
 
+@SuppressWarnings("serial")
 public class MousePanel extends JPanel implements MouseListener {
 
 	public static void main(String[] args) {

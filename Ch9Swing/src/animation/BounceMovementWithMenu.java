@@ -6,13 +6,11 @@
 
 package animation;
 
-import graphics.GraphicsPanel;
-
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class BounceMovementWithMenu extends JPanel implements ActionListener {
 	int x = 100;
 	int y = 100;
@@ -32,19 +30,23 @@ public class BounceMovementWithMenu extends JPanel implements ActionListener {
 	JMenuItem stopItem;
 
 	JFrame frame;
+	
+	Block[] blocks = new Block[4];
 
 	public static void main(String[] args) {
 		BounceMovementWithMenu panel = new BounceMovementWithMenu();
 		
 		panel.setupWindow(panel);
-		panel.Test();
+		//panel.Test();
 	}
 
 	public void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
 
 		graphics.setColor(new Color(153, 204, 255));
-		graphics.fillRect(x, y, rectwidth, rectheight);
+		for (int i = 0; i < blocks.length; i ++) {
+			graphics.fillOval(blocks[i].getX(), blocks[i].getY(), blocks[i].getWidth(), blocks[i].getHeight());
+		}
 
 	}
 
@@ -52,7 +54,7 @@ public class BounceMovementWithMenu extends JPanel implements ActionListener {
 		// https://stackoverflow.com/questions/8955638/how-do-i-move-my-jmenubar-to-the-screen-menu-bar-on-mac-os-x
 		System.setProperty("apple.laf.useScreenMenuBar", "true");
         System.setProperty(
-            "com.apple.mrj.application.apple.menu.about.name", "Name");
+            "com.apple.mrj.application.apple.menu.about.name", "Bounce Animation");
         frame = new JFrame("Main Frame");
 		menubar = new JMenuBar();
 		fileMenu = new JMenu("File");
@@ -83,18 +85,20 @@ public class BounceMovementWithMenu extends JPanel implements ActionListener {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(panel);
 		
-
+		blocks[0] = new Block(30, frame, rectwidth, rectheight, 50, 200);
+		blocks[1] = new Block(30, frame, rectwidth, rectheight, 200, 50);
+		
 		frame.setVisible(true);
 		width = frame.getContentPane().getWidth();//not really needed, this should be the same as the frame width.
 		height = frame.getContentPane().getHeight();//the content pane is the height minus the top title bar.
 
+		
+		for (int i = 0; i < blocks.length; i ++) {
+			blocks[i].start();
+		}
 	}
 
-	public void Test() {
-		t = new Timer(10, this);
-		t.start();
-	}
-
+	
 	public void actionPerformed(ActionEvent e) {
 		//System.out.println(e);
 		if (e.getSource() == t) {
@@ -113,10 +117,16 @@ public class BounceMovementWithMenu extends JPanel implements ActionListener {
 			frame.repaint();
 		} else if (e.getSource() == exitItem) {
 			//exit
+			System.exit(1);
+
 		} else if (e.getSource() == startItem) {
-			t.start();
+			for (int i = 0; i < blocks.length; i ++) {
+				blocks[i].start();
+			}
 		} else if (e.getSource() == stopItem) {
-			t.stop();
+			for (int i = 0; i < blocks.length; i ++) {
+				blocks[i].stop();
+			}
 		}
 
 	}

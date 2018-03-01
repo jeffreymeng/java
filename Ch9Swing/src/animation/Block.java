@@ -68,7 +68,23 @@ public class Block implements ActionListener {
 	public int getY() {
 		return y;
 	}
-
+	
+	public int getWidth() {
+		return rectWidth;
+	}
+	
+	public int getHeight() {
+		return rectHeight;
+	}
+	
+	public void setWidth(int width) {
+		rectWidth = width;
+	}
+	
+	public void setHeight(int height) {
+		rectHeight = height;
+	}
+	
 	public double getDeltaX() {
 		return dx;
 	}
@@ -123,24 +139,26 @@ public class Block implements ActionListener {
 			dy *= -1;
 
 		}
-		for (int i = 0; i < numWatching; i ++) {
-			//logic for x
-			/*
-			 * 
-			 * 
-			 * 
-			 */
-			//TODO: finish
-			if ((x + rectWidth) >= watching[i].getX() || (x) <= 0) {
-				dx *= -1;
-
-			}
-			if ((y + rectHeight) >= watching[i].getY() || (y) <= 0) {
-				dy *= -1;
-
-			}
-		}
+		
+//		for (int i = 0; i < numWatching; i ++) {
+//			//logic for x
+//			/*
+//			 * 
+//			 * 
+//			 * 
+//			 */
+//			//TODO: finish
+//			if ((x + rectWidth) >= watching[i].getX() || (x) <= 0) {
+//				dx *= -1;
+//
+//			}
+//			if ((y + rectHeight) >= watching[i].getY() || (y) <= 0) {
+//				dy *= -1;
+//
+//			}
+//		}
 		System.out.println(x);
+		
 		if (frame != null) {
 			frame.repaint();
 		}

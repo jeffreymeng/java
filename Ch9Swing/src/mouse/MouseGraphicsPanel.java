@@ -11,6 +11,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+@SuppressWarnings("serial")
 public class MouseGraphicsPanel extends JPanel implements MouseListener {
 	public JFrame frame = new JFrame("Mouse Panel");
 	public static MouseGraphicsPanel panel;

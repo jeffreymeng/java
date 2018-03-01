@@ -12,6 +12,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.concurrent.ThreadLocalRandom;
 
+@SuppressWarnings("serial")
 public class CatchRectanglePanel extends JPanel implements MouseListener {
 	public JFrame frame = new JFrame("Mouse Panel");
 	public static CatchRectanglePanel panel;
