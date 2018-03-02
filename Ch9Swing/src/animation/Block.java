@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.Timer;
 
 public class Block implements ActionListener {
-	int windowWidth, windowHeight, framerate, rectWidth, rectHeight;
+	int windowWidth, windowHeight, speed, rectWidth, rectHeight;
 	int x, y;
 	double dx = 1, dy = 1;
 	JFrame frame = null;
@@ -23,7 +23,7 @@ public class Block implements ActionListener {
 	public Block() {
 		this.windowWidth = 600;
 		this.windowHeight = 400;
-		this.framerate = 30;
+		this.speed = 30;
 		this.rectWidth = 50;
 		this.rectHeight = 50;
 		this.frame = null;//will not work until you call setFrame()
@@ -32,19 +32,22 @@ public class Block implements ActionListener {
 
 	}
 
-	public Block(int framerate, JFrame frame, int rectWidth, int rectHeight) {
+	public Block(int speed, JFrame frame, int rectWidth, int rectHeight) {
 
-		this.framerate = framerate;
+		this.speed = speed;
 		this.rectWidth = rectWidth;
 		this.rectHeight = rectHeight;
+		
 		this.frame = frame;
+		this.windowWidth = frame.getContentPane().getWidth();
+		this.windowHeight = frame.getContentPane().getHeight();
 		this.x = 0;
 		this.y = 0;
 
 	}
-	public Block(int framerate, JFrame frame, int rectWidth, int rectHeight, int startX, int startY) {
+	public Block(int speed, JFrame frame, int rectWidth, int rectHeight, int startX, int startY) {
 
-		this.framerate = framerate;
+		this.speed = speed;
 		this.rectWidth = rectWidth;
 		this.rectHeight = rectHeight;
 		this.frame = frame;
@@ -53,7 +56,7 @@ public class Block implements ActionListener {
 
 	}
 	public void start() {
-		timer = new Timer((int) 1000.0 / framerate, this);
+		timer = new Timer(speed, this);
 		timer.start();
 	}
 
@@ -128,8 +131,8 @@ public class Block implements ActionListener {
 			 width = 600;
 			 height = 400;
 		} else {
-			 width = frame.getContentPane().getHeight();
-			 height = frame.getContentPane().getWidth();
+			 width = frame.getContentPane().getWidth();
+			 height = frame.getContentPane().getHeight();
 		}
 		if ((x + rectWidth) >= width || (x) <= 0) {
 			dx *= -1;
