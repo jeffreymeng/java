@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;layouts.GridLayoutWindow&apos; to &apos;GridLayoutPanel&apos;&#x0A;- Original project: &apos;Ch9Swing&apos;&#x0A;- Original element: &apos;layouts.GridLayoutWindow&apos;&#x0A;- Renamed element: &apos;layouts.GridLayoutPanel&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;GridLayoutWindow&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;layouts{GridLayoutWindow.java[GridLayoutWindow" matchStrategy="1" name="GridLayoutPanel" qualified="false" references="true" similarDeclarations="false" stamp="1520870426973" textual="false" version="1.0"/>
+</session>

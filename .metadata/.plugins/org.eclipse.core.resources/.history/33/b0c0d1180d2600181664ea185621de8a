@@ -1,0 +1,56 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Mar 12, 2018
+ * Purpose:
+ */
+
+package layouts;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class GridLayoutWindow implements ActionListener {
+	private JButton[] buttons = new JButton[6];
+	private final String password = "1234";
+	private String userInputPassword = "";
+	public void actionPerformed(ActionEvent e) {
+		for (int i = 0; i < buttons.length; i ++) {
+			if (e.getSource() == buttons[i] && i < (buttons.length - 2)) {
+				userInputPassword += String.valueOf(i + 1);
+			} else {
+				
+			}
+		}
+		if (e.getSource() == buttons[0]) {
+			userInputPassword += "1";
+		} else if (e.getSource() == b2) {
+			userInputPassword += "1";
+		} else if (e.getSource() == b3) {
+			userInputPassword += "1";
+		} else if (e.getSource() == b4) {
+			userInputPassword += "1";
+		} else if (e.getSource() == b5) {
+			if (userInputPassword == password) {
+				System.out.println("Pin Correct");
+				userInputPassword = "";
+			} else {
+				System.out.println("Pin Incorrect");
+				userInputPassword = "";
+			}
+		} else if (e.getSource() == b6) {
+			System.exit(0);
+		}
+	}
+	
+	public void setupWindow() {
+		JFrame frame = new JFrame("Enter the pin");
+		JPanel panel = new JPanel();
+		
+		panel.setLayout(new GridLayout(2, 3));
+		
+		b1 = new JButton("1");
+		b1.addActionListener(this);
+		panel.add(b1);
+	}
+}

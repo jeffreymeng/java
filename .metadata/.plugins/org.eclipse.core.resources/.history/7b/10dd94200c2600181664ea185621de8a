@@ -1,0 +1,32 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Mar 12, 2018
+ * Purpose:
+ */
+
+package layouts;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class GridLayoutWindow implements ActionListener {
+	private JButton b1, b2, b3, b4, b5, b6;
+	private final String password = "1234";
+	private String userInputPassword = "";
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == b1) {
+			System.out.println("Button 1 pressed");
+		} else if (e.getSource() == b2) {
+			System.out.println("Button 2 pressed");
+		} else if (e.getSource() == b3) {
+			System.out.println("Button 3 pressed");
+		} else if (e.getSource() == b4) {
+			System.out.println("Button 4 pressed");
+		} else if (e.getSource() == b5) {
+			System.out.println("Button 5 pressed");
+		} else if (e.getSource() == b6) {
+			System.exit(0);
+		}
+	}
+}
