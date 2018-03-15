@@ -1,5 +1,5 @@
 /*
- * Programmer: Jeffrey Meng
+  * Programmer: Jeffrey Meng
  * Date: Feb 26, 2018
  * Purpose:
  */
@@ -84,9 +84,9 @@ public class BackgroundPanel extends JPanel implements ActionListener,
 				y = y - imgWidth;
 			}
 			
-		} else if (x < 0) {
+		} else if (dx < 0) {
 			if (x <= 0) {
-				x = imgWidth;
+				x = 0;
 			}
 
 			if (y <= 0) { 

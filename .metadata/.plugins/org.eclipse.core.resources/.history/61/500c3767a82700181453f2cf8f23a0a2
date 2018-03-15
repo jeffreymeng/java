@@ -1,0 +1,67 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Mar 14, 2018
+ * Purpose:
+ */
+
+package forms;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class TextFieldPanel implements ActionListener {
+	
+	private JFrame frame;
+	private JPanel controlPanel, inputPanel, displayPanel;
+	private JLabel inputLabel, displayLabel;
+	private JTextField inputField;
+	private JButton submitButton, clearButton, exitButton;
+	public void actionPerformed(ActionEvent e) {
+		
+
+	}
+
+	public void setupWindow() {
+		frame = new JFrame("Easy Form");
+		controlPanel = new JPanel();
+		inputPanel = new JPanel();
+		displayPanel = new JPanel();
+
+		frame.setLayout(new GridLayout(3, 1));
+
+		controlPanel.setLayout(new GridLayout(1, 3));
+		inputPanel.setLayout(new FlowLayout());
+		displayPanel.setLayout(new FlowLayout());
+
+		submitButton = new JButton("Submit");
+		clearButton = new JButton("Clear");
+		exitButton = new JButton("Exit");
+		
+		controlPanel.add(submitButton);
+		controlPanel.add(clearButton);
+		controlPanel.add(exitButton);
+		
+		inputLabel = new JLabel("Enter Something: ");
+		inputField = new JTextField();
+		
+		
+		displayLabel = new JLabel();
+		
+		
+		
+		frame.getContentPane().add(controlPanel);
+		frame.getContentPane().add(inputPanel);
+		frame.getContentPane().add(displayPanel);
+
+		frame.setSize(300, 600);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		TextFieldPanel window = new TextFieldPanel();
+		window.setupWindow();
+	}
+}
