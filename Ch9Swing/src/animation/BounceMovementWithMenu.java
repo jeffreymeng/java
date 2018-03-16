@@ -11,7 +11,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
-public class BounceMovementWithMenu extends JPanel implements ActionListener {
+public class BounceMovementWithMenu extends JPanel implements ActionListener, forms.AnimationPanel {
 	int x = 100;
 	int y = 100;
 	double ys = 1;// speed
@@ -120,13 +120,15 @@ public class BounceMovementWithMenu extends JPanel implements ActionListener {
 													// height minus the top
 													// title bar.
 
+		start();
+	}
+	public void start() {
 		for (int i = 0; i < blocks.length; i++) {
 			if (blocks[i] != null) {
 				blocks[i].start();
 			}
 		}
 	}
-
 	public void actionPerformed(ActionEvent e) {
 		// System.out.println(e);
 		if (e.getSource() == t) {

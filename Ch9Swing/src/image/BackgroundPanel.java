@@ -11,9 +11,11 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
+import forms.AnimationPanel;
+
 @SuppressWarnings("serial")
 public class BackgroundPanel extends JPanel implements ActionListener,
-		KeyListener {
+		KeyListener, forms.AnimationPanel {
 	static JFrame frame;
 	private Image img;
 	private int imgWidth;
@@ -24,11 +26,19 @@ public class BackgroundPanel extends JPanel implements ActionListener,
 	double dx = 1;
 	boolean paused;
 
-	private BackgroundPanel() {
+	public BackgroundPanel() {
 		ImageIcon i = new ImageIcon("src/background.jpg");
 		img = i.getImage();
 		imgWidth = img.getWidth(null);
 		imgHeight = img.getHeight(null);
+
+	}
+	public BackgroundPanel(JFrame frame) {
+		ImageIcon i = new ImageIcon("src/background.jpg");
+		img = i.getImage();
+		imgWidth = img.getWidth(null);
+		imgHeight = img.getHeight(null);
+		this.frame = frame;
 
 	}
 
@@ -55,7 +65,7 @@ public class BackgroundPanel extends JPanel implements ActionListener,
 		frame.setResizable(false);
 		frame.addKeyListener(this);
 		frame.setVisible(true);
-		startTimer();
+		start();
 	}
 
 	public static void main(String[] args) {
@@ -64,7 +74,7 @@ public class BackgroundPanel extends JPanel implements ActionListener,
 		panel.setupWindow(panel);
 	}
 
-	public void startTimer() {
+	public void start() {
 		Timer t = new Timer(5, this);
 		t.start();
 	}
@@ -95,7 +105,7 @@ public class BackgroundPanel extends JPanel implements ActionListener,
 			}
 		}
 
-		frame.repaint();
+		this.repaint();
 	}
 
 	public void keyPressed(KeyEvent e) {

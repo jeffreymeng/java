@@ -12,7 +12,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
-public class BounceMovement extends JPanel implements ActionListener {
+public class BounceMovement extends JPanel implements ActionListener, forms.AnimationPanel {
 	int x = 100;
 	int y = 100;
 	double ys = 1;// speed
@@ -27,7 +27,7 @@ public class BounceMovement extends JPanel implements ActionListener {
 	public static void main(String[] args) {
 		BounceMovement panel = new BounceMovement();
 		panel.setupWindow(panel);
-		panel.Test();
+		panel.start();
 	}
 
 	public void paintComponent(Graphics graphics) {
@@ -50,7 +50,7 @@ public class BounceMovement extends JPanel implements ActionListener {
 
 	}
 
-	public void Test() {
+	public void start() {
 		Timer t = new Timer(10, this);
 		t.start();
 	}
@@ -68,7 +68,7 @@ public class BounceMovement extends JPanel implements ActionListener {
 			
 		}
 		
-		frame.repaint();
+		this.repaint();
 	}
 
 }

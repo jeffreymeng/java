@@ -9,7 +9,6 @@ import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
-import forms.RoundIcon;
 
 public class RadioComboPanel implements ActionListener {
 
@@ -22,7 +21,7 @@ public class RadioComboPanel implements ActionListener {
 	private JRadioButton[] radioButtons = new JRadioButton[NUM_CARDS];
 	private String[] comboBoxChoices = new String[NUM_CARDS];
 	private JComboBox<String> select;
-	private RoundIcon icon = new RoundIcon(Color.RED);
+	//private RoundIcon icon = new RoundIcon(Color.RED);
 
 	public void actionPerformed(ActionEvent e) {
 		CardLayout layout = (CardLayout) (displayPanel.getLayout());
