@@ -1,0 +1,16 @@
+/*
+ * Programmer: Jeffrey Meng
+ * Date: Mar 20, 2018
+ * Purpose:
+ */
+
+package proofofconcept;
+
+public class ProofOfConcept {
+
+	public static void main(String[] args) {
+		String[] program = {"print", "hi", "mutiply", "add", "2", "3", "5"};
+
+	}
+
+}

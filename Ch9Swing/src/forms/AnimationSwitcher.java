@@ -24,7 +24,7 @@ public class AnimationSwitcher implements ActionListener {
 	private JFrame frame;
 	private JPanel controlPanel, displayPanel;
 	
-	private String[] names = {"Background Panel",    "Bounce Movement"};
+	//private String[] names = {"Background Panel",    "Bounce Movement"};
 	private AnimationPanel[] cards = {new BackgroundPanel(), new BounceMovement()};
 
 	//private JPanel[] cards = new JPanel[NUM_CARDS];

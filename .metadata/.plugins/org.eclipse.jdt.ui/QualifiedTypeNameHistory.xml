@@ -29,4 +29,5 @@
 <fullyQualifiedTypeName name="javax.swing.Icon"/>
 <fullyQualifiedTypeName name="image.BackgroundPanel"/>
 <fullyQualifiedTypeName name="forms.AnimationPanel"/>
+<fullyQualifiedTypeName name="java.util.stream.IntStream"/>
 </qualifiedTypeNameHistroy>

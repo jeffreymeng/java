@@ -11,7 +11,6 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
-import forms.AnimationPanel;
 
 @SuppressWarnings("serial")
 public class BackgroundPanel extends JPanel implements ActionListener,
@@ -38,7 +37,7 @@ public class BackgroundPanel extends JPanel implements ActionListener,
 		img = i.getImage();
 		imgWidth = img.getWidth(null);
 		imgHeight = img.getHeight(null);
-		this.frame = frame;
+		//this.frame = frame;
 
 	}
 
