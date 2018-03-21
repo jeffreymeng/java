@@ -70,7 +70,7 @@ public class ProofOfConcept {
 
 	}
 	public static int parse(String... args) {
-		String[] tokens = {"print", "add", "mutiply"};
+		String[] tokens = ["print", "add", "mutiply"];
 		switch(args[0]) {
 			case "print":
 				return i + 1;

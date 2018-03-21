@@ -32,7 +32,7 @@ class MutiplyMethod extends Method {
 		this.args = args;
 	}
 	public int run() {
-		int result = 1;
+		int result;
 		for (int i = 0; i < args.length; i ++) {
 			result *= args[i];
 		}
@@ -57,26 +57,16 @@ public class ProofOfConcept {
 		for (int i = 0; i < program.length; i++) {
 			switch (program[i]) {
 			case "print":
-				i += parse(program[i + 1]);
+				print(program[i + 1]);
+				i += 1;
 				break;
 			case "add":
-				i += parse(program[i + 1], program[i + 2]);
-				break;
-			case "mutiply":
-				i += parse( program[i + 1], program[i + 2]);
+				print( String.valueOf(add(Integer.parseInt(program[i + 1]), Integer.parseInt( program[i + 2]))));
+				i += 2;
 				break;
 			}
 		}
 
-	}
-	public static int parse(String... args) {
-		String[] tokens = {"print", "add", "mutiply"};
-		switch(args[0]) {
-			case "print":
-				return i + 1;
-				break;
-				
-		}
 	}
 
 	private static void print(String text) {
