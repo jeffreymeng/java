@@ -61,7 +61,7 @@ public class CardLayoutBasic implements ActionListener {
 			cardParentPanel.add(cards[i]);
 
 			buttons[i] = new JButton("Switch to card " + (i + 1));
-
+			
 			buttons[i].addActionListener(this);
 			controlPanel.add(buttons[i]);
 

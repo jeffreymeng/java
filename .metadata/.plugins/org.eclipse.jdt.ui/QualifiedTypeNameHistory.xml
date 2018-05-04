@@ -9,15 +9,11 @@
 <fullyQualifiedTypeName name="java.net.URLClassLoader"/>
 <fullyQualifiedTypeName name="java.net.MalformedURLException"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="utils.Confirmation"/>
 <fullyQualifiedTypeName name="bankAccount.SavingsAccount"/>
 <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
-<fullyQualifiedTypeName name="javax.swing.JPanel"/>
-<fullyQualifiedTypeName name="java.awt.Graphics"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
@@ -30,4 +26,13 @@
 <fullyQualifiedTypeName name="image.BackgroundPanel"/>
 <fullyQualifiedTypeName name="forms.AnimationPanel"/>
 <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="java.awt.event.MouseEvent"/>
+<fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
+<fullyQualifiedTypeName name="level.ColumnLevel"/>
+<fullyQualifiedTypeName name="java.awt.Graphics"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
 </qualifiedTypeNameHistroy>
