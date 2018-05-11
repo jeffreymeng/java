@@ -12,22 +12,34 @@ import java.text.DecimalFormat;
 class WordValidator {
 	private String[] wordlist;
 	private String filepath;
+	
 	public static void main(String[] args) {
+		boolean validateAgain = true;
 		String input;
 		Scanner in = new Scanner(System.in);
 		WordValidator validator = new WordValidator("words.txt");
 		validator.init();
 				
-		System.out.println("Enter a word:                   ");
-                validator.validate(in.nextLine());
+		System.out.println("\nEnter a word:");
+                if( validator.validate(in.nextLine())) {
+			System.out.println("That's a word!");
+
+		} else {
+			System.out.println("That's NOT a word!");
+		}
 
 		
 		while(validateAgain) {
 			System.out.print("Validate another word? (Y)es/(n)o: ");
 			input = in.nextLine();
 			if (input.equalsIgnoreCase("y")) {
-				System.out.println("Enter a word:");
-				validator.validate(in.nextLine());	
+				System.out.print("Enter a word: ");
+				if( validator.validate(in.nextLine())) {
+                        		System.out.println("That's a word!");
+
+               			 } else {
+                        		System.out.println("That's NOT a word!");
+                		}
 			} else {
 				validateAgain = false;
 				break;
@@ -43,11 +55,10 @@ class WordValidator {
 		this.filepath = path;
 	}
 	public void init() {
-				Scanner reader;		
+		Scanner reader;		
 		
                 File file;
 		int lines = 0;
-		boolean validateAgain = true;
 		System.out.println("WordValidation v2.0.0");
 		System.out.print("Calculating time remaning...\r");
 		try {
@@ -78,6 +89,8 @@ class WordValidator {
                         	
 			}
                         reader.close();
+			System.out.print(WordValidator.getLoadingStr(1.0));
+
 
                 } catch (Exception ex) {
                         ex.printStackTrace();
@@ -90,16 +103,13 @@ class WordValidator {
 
 	}
 
-	public void validate(String word) {
+	public boolean validate(String word) {
 		for (int i = 0; i < wordlist.length; i ++) {
 
-			if (wordlist[i].equalsIgnoreCase(word)) {
-				System.out.println("That's a word!                        ");
-				return;
+			if (wordlist[i].equalsIgnoreCase(word)) {						return true;
 			}
 		}
-		System.out.println("That's NOT a word!                         ");
-		return;
+		return false;
 	}
 
 	public static String getLoadingStr(double percent) {
@@ -111,16 +121,20 @@ class WordValidator {
 		String percentStr = percentFormatter.format(percent);
 		String fillSym = "=";//the symbol to use when a tick of the bar is filled
 		String emptySym = " ";//the symbol to use when a tick of the bar is empty
-		
-return "  " + percentStr + " |" + repeatStr(fillSym, (int) (percent * 20)) + repeatStr(emptySym,  20 - ((int) (percent * 20)))  +  "|\r     ";
+		int numBars = (int) (percent * 20);	
+return "  " + percentStr + " |" + repeatStr(fillSym, numBars) + repeatStr(emptySym,  20 - numBars)  +  "|\r     ";
 
 	}
 	public static String repeatStr(String str, int count) {
 		String result = "";
 		//note: this is a very basic implementation, not the most efficient
 		// If using java 11+, you can use the string.prototype.repeat() method
+		
+		if (count == 0) {
+			return "";
+		}
 		for (int i = 0; i < count; i ++) {
-			result += str;
+			result = result + str;
 		}
 		return result;
 
