@@ -9,15 +9,18 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+
 public class WordValidatorUI implements ActionListener, KeyListener {
 
 	private JFrame frame;
 	private JPanel panel;
-	private JLabel inputLabel, resultLabel;
+	private JLabel inputLabel, resultLabel, loadingLabel;
 	private JTextField inputField;
 	private JButton submitButton;
 	private String filepath;	
-		
+	private WordValidator validator;
+	private JProgressBar progressBar;	
+
 	public static void main(String[] args) {
 		WordValidatorUI wordValidatorUI = new WordValidatorUI("words.txt");
 		wordValidatorUI.setupWindow();
@@ -28,10 +31,9 @@ public class WordValidatorUI implements ActionListener, KeyListener {
 		this.filepath = filepath;
 		boolean validateAgain = true;
 		String input;
-		Scanner in = new Scanner(System.in);
-		WordValidator validator = new WordValidator("words.txt");
+
+		validator  = new WordValidator("words.txt");
 		validator.init();
-		validator.validate(in.nextLine());
 		
 
 	}
@@ -47,17 +49,19 @@ public class WordValidatorUI implements ActionListener, KeyListener {
 		panel.add(inputLabel);
 		
 		inputField = new JTextField(15);
+		inputField.addKeyListener(this);		
 		panel.add(inputField);	
 	
 		submitButton = new JButton("Validate!");
+		submitButton.addActionListener(this);
 		panel.add(submitButton);
 		
 		resultLabel = new JLabel("");
-		panel.add(resultLabel());	
+		panel.add(resultLabel);	
 
 		frame.add(panel);
 		
-		frame.setSize(400, 500);
+		frame.setSize(400, 150);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
@@ -74,6 +78,22 @@ public class WordValidatorUI implements ActionListener, KeyListener {
 		}
 	}
 	
+	public void keyPressed(KeyEvent e) {
+
+		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+			validate();
+		}
+
+	}
+
+	public void keyReleased(KeyEvent e) {
+
+
+	}
+
+	public void keyTyped(KeyEvent e) {
+		
+	}	
 
 	public void validate() {
 		if (validator.validate(inputField.getText())) {
