@@ -20,8 +20,11 @@ class DictionarySorter {
 		String[] wordlist = readFileIntoArray(in.nextLine());
 		wordlist = sort(wordlist);//java non-primitive types such as String[] are pass by refrence
 		String[] out = new String[wordlist.length + 1];
+
+		//shift everything in the array by one to add a number of words line.
+		//TODO: convert wordlist to arraylist so as to not create a new array.
 		out[0] = "// Number of words: " + wordlist.length;
-		for (int i = 1; i < wordlist.length; i ++) {
+		for (int i = 1; i < wordlist.length + 1; i ++) {
 			out[i] = wordlist[i - 1];
 		}	
 		
@@ -120,13 +123,6 @@ class DictionarySorter {
 
 
 	}
-
-
-
-
-
-
-
 
 
 
