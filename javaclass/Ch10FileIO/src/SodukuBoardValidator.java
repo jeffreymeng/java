@@ -17,8 +17,13 @@ class SodukuBoardValidator {
 		System.out.print("Enter the path of the file to read from: ");
 		String path = in.nextLine();
 		SodukuBoardValidator validator = new SodukuBoardValidator(path);
-		System.out.println(validator.validate());
-
+		SodukuBoardValidationResult result = validator.validate();
+		if (result.isValid()) {
+			System.out.println("Your board is valid!");
+		} else {
+			System.out.println("Your board is not valid!");
+			System.out.println("Your error: " + result.getErrorMessage());
+		}
 
 	}
 
@@ -73,8 +78,9 @@ class SodukuBoardValidator {
 	public int[][] getBoard() {
 		return board;
 	}
-
-	public boolean validate() {
+	
+	
+	public SodukuBoardValidationResult validate() {
 
 		boolean[] numList = new boolean[9];//boolean[] init to false - this numList is for rows, it can be reset after each iteration
 		String error = "";//TODO: consider printing error
@@ -84,8 +90,8 @@ class SodukuBoardValidator {
 			numList = new boolean[9];//reset numList to all false
 			for (int col = 0; col < board[0].length; col ++) {
 				if (numList[board[i][col] - 1]) {
-					error = "Duplicate number '" + board[i][col] + "' in row at location " + (i + 1) + ", " + (col + 1) + ".";
-					return false;
+					
+					return new SodukuBoardValidationResult(false, i + 1, col + 1, board[i][col], "row");
 				}
 				numList[board[i][col] - 1] = true;//set the number to used. (start counting array from 0, so subtract one)
 
@@ -97,8 +103,8 @@ class SodukuBoardValidator {
 			numList = new boolean[9];
 			for (int row = 0; row < board.length; row ++) {
 				if (numList[board[row][i] - 1]) {
-					error = "Duplicate number '" + board[row][i] + "' in column at location " + (row + 1) + ", " + (i + 1) + ".";
-                                        return false;
+					
+                                        return new SodukuBoardValidationResult(false, row + 1, i + 1, board[row][i], "column");
 				} else {
 					numList[board[row][i] - 1] = true;
 				}
@@ -115,18 +121,15 @@ class SodukuBoardValidator {
 				int blockx = (int) Math.ceil((double) (x + 1) / 3) - 1;//convert coordinates starting from 1 to coordinates starting from 0
 				int blocky = (int) Math.ceil((double) (y + 1) / 3) - 1;				
 				if (blockNumList[blockx][blocky][board[y][x] - 1]) {// In a 2d array, x,y is inverted because it is row first, then column.	
-					error = "Duplicate number '" + board[y][x] + "' in block at location " + (x + 1) + ", " + (y + 1) + ".";
-					return false;
+					
+					return new SodukuBoardValidationResult(false, x + 1, y + 1, board[y][x], "block");
 				} else {
 
 					blockNumList[blockx][blocky][board[y][x] - 1] = true;
 				}		
 			}
 		}
-		//TODO: remove
-		System.out.println(error);
-		return true;
-
+		return new SodukuBoardValidationResult(true);
 	}	
 
 
